@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const connectDB = require('./config/database.js')
 
+app.set('view engine','ejs')
 app.use(express.static('public'))
 require('dotenv').config({path:'./config/.env'})
 connectDB()
