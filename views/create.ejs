@@ -1,0 +1,64 @@
+<h1>CREATE NEW MENU ITEM</h1>
+
+<form   id="create-new-item-form"
+        action="/create"
+        method="POST">
+
+    <select id="menu" name="menu" required>
+        <option disabled selected>Select a Menu...</option>
+        <option value="wine">Wine</option>
+        <option value="spirits">Spirits</option>
+    </select>
+    <br><br>
+
+    <label for="collection">Menu Location:</label><br>
+    <select id="collection" name="collection" required>
+        <option disabled selected>Select Menu Location...</option>
+        <option value="btg">By the Glass</option>
+        <option value="half-bottles_large-formats">Half Bottles & Large Formats</option>
+        <option value="sake">Sake</option>
+        <option value="sparkling_champagne">Sparkling & Champagne</option>
+        <option value="white_wine">White Wine</option>
+        <option value="rosé_wine">Rosé Wine</option>
+        <option value="red_wine">Red Wine</option>
+        <option value="sweet_fortified_wines">Sweet & Fortified Wines</option>
+    </select>
+    <br><br>
+
+    <label for="section">Section:</label><br>
+    <select id="section" name="section" required>
+        <option disabled selected>Select a Section...</option>
+        <option value="sake">Sake</option>
+        <option value="carafe">Carafe</option>
+        <option value="champagne">Champagne</option>
+        <option value="white_wine">White Wine</option>
+        <option value="rosé">Rosé</option>
+        <option value="red wine">Red Wine</option>
+        <option value="dessert_fortified">Dessert & Fortified</option>
+    </select>
+    <br><br>
+
+    <label for="bin">Bin: </label>
+    <input type="number" name="bin" min="0" max="9999" required>    
+    <br><br>
+
+    <label for="description">Description:</label><br>
+    <input type="text" required name="description" size="60" maxlength="75" placeholder="Write Description Here...">
+    <br><br>
+
+    <label for="vintage">Vintage:</label>
+    <input type="text" size="4" maxlength="4" name="vintage">
+
+    <label for="size">Size:</label>
+    <input type="number" min="0" max="9999" name="size">
+
+    <br><br>
+
+    <label for="price">Price: $</label>
+    <input type="number" min="0" max="99999" name="price" required>
+
+    <br><br>
+
+    <button type="submit" style="cursor:pointer">Create New Menu Item</button>
+</form>
+
