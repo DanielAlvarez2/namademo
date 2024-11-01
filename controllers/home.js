@@ -1,7 +1,12 @@
 const BTG = require('../models/BTG.js')
 
 module.exports={
-    getIndex:(req,res)=>res.render('index.ejs'),
+    getIndex:async(req,res)=>{
+        const btg_sake = await BTG.find({
+            section:'sake'
+        }).sort({sequence:'asc'})
+        res.render('index.ejs',{btg_sake:btg_sake})
+    },
 
     getCreate:(req,res)=>res.render('create.ejs'),
 
