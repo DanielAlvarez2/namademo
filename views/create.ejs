@@ -1,69 +1,273 @@
-<h1>CREATE NEW MENU ITEM</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<form   id="create-new-item-form"
-        action="/create"
-        method="POST">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        #tab-flexbox{
+            margin:0 auto;
+            display:flex;
+            width:95%;
+            justify-content:space-between;
+        }
+        #wine-tab,
+        #spirit-tab{
+            border-radius:10px 10px 0 0;
+            width:50%;
+            text-align:center;
+            border-top:1px solid black;
+            border-left:1px solid black;
+            border-right:1px solid black;
+            height:2rem;
+            display:grid;
+            align-content:center;
+        }
+        #wine-tab{
+            background:lightblue;
+        }
+        #spirit-tab{
+            background:rgb(183, 255, 183);
+            border-bottom:1px solid black;
+            cursor:pointer;
+        }
+        #wine-form{
+            border-radius:0 0 10px 10px;
+            padding:1rem;
+            margin:0 auto;
+            width:95%;
+            background:lightblue;
+            border-left:1px solid black;
+            border-right:1px solid black;
+            border-bottom:1px solid black;
+        }
+        h1{
+            width:95%;
+            margin:0 auto;
+            padding-top:1rem;
+            text-align: center;
+        }
+        button{
+            padding:0.5em 1em;
+            border-radius:10px;
+            cursor:pointer;
+        }
+        #section-wrapper{
+            position:relative;
+        }
+        .section{
+            position:absolute;
+            visibility:hidden;
+        }
+    </style>
+</head>
 
-    <select id="menu" name="menu" required>
-        <option disabled selected>Select a Menu...</option>
-        <option value="wine">Wine</option>
-        <option value="spirits">Spirits</option>
-    </select>
+<body>
+    <h1>CREATE NEW MENU ITEM</h1>
     <br><br>
+    <div id="tab-flexbox">
+        <div id="wine-tab">Add New Wine</div>
+        <div id="spirit-tab">Add New Spirit</div>
+    </div>
+    <div id="wine-form">
+        <form>
+            <input type="hidden" value="wine" name="wine_spirit">
 
-    <label for="collection">Menu Location:</label><br>
-    <select id="collection" name="collection" required>
-        <option disabled selected>Select Menu Location...</option>
-        <option value="btg">By the Glass</option>
-        <option value="half-bottles_large-formats">Half Bottles & Large Formats</option>
-        <option value="sake">Sake</option>
-        <option value="sparkling_champagne">Sparkling & Champagne</option>
-        <option value="white_wine">White Wine</option>
-        <option value="rosé_wine">Rosé Wine</option>
-        <option value="red_wine">Red Wine</option>
-        <option value="sweet_fortified_wines">Sweet & Fortified Wines</option>
-    </select>
-    <br><br>
+            <label for="type">Type of Wine:</label><br>
+            <select id="type" name="type" required>
+                <option disabled selected>Select Wine Type...</option>
+                <option value="BY THE GLASS">By The Glass</option>
+                <option value="HALF BOTTLES">Half Bottle</option>
+                <option value="LARGE FORMATS">Large Format</option>
+                <option value="SAKE">Sake</option>
+                <option value="SPARKLING">Sparkling</option>
+                <option value="CHAMPAGNE">Champagne</option>
+                <option value="WHITE WINE">White Wine</option>
+                <option value="ROSÉ WINE">Rosé Wine</option>
+                <option value="RED WINE">Red Wine</option>
+                <option value="SWEET WINE">Sweet Wine</option>
+                <option value="FORTIFIED WINE">Fortified Wine</option>
+            </select>
 
-    <label for="section">Section:</label><br>
-    <select id="section" name="section" required>
-        <option disabled selected>Select a Section...</option>
-        <option value="sake">Sake</option>
-        <option value="carafe">Carafe</option>
-        <option value="champagne">Champagne</option>
-        <option value="white_wine">White Wine</option>
-        <option value="rosé">Rosé</option>
-        <option value="red wine">Red Wine</option>
-        <option value="dessert_fortified">Dessert & Fortified</option>
-    </select>
-    <br><br>
+            <br><br>
+            <label for="section" id="label-section">Section:</label><br>
+            
+            <div id="section-wrapper">
 
-    <label for="bin">Bin: </label>
-    <input type="number" name="bin" min="0" max="9999" required>    
-    <br><br>
+                <select class="section" id="section-btg" name="section">
+                    <option disabled selected>BTG Select a Section...</option>
+                    <option value="SAKE">Sake</option>
+                    <option value="CARAFE">Carafe</option>
+                    <option value="CHAMPAGNE">Champagne</option>
+                    <option value="WHITE WINE">White Wine</option>
+                    <option value="ROSÉ WINE">Rosé Wine</option>
+                    <option value="RED WINE">Red Wine</option>
+                    <option value="DESSERT WINE">Dessert Wine</option>
+                </select>
 
-    <label for="description">Description:</label><br>
-    <input type="text" required name="description" size="60" maxlength="75" placeholder="Write Description Here...">
-    <br><br>
+                <select class="section" id="section-half-bottle" name="section">
+                    <option disabled selected>1/2BTL Select a Section...</option>
+                    <option value="CHAMPAGNE">Champagne</option>
+                    <option value="WHITE WINE">White Wine</option>
+                    <option value="RED WINE">Red Wine</option>
+                    <option value="SAKE">Sake</option>
+                </select>
 
-    <label for="vintage">Vintage:</label>
-    <input type="text" size="4" maxlength="4" name="vintage">
+                <select name="section" class="section" id="section-large-format">
+                    <option disabled selected>LARGE FORMAT Select a Section...</option>
+                    <option value="SPARKLING & CHAMPAGNE">Sparkling & Champagne</option>
+                    <option value="WHITE WINE">White Wine</option>
+                    <option value="ROSÉ WINE">Rosé Wine</option>
+                    <option value="RED WINE">Red Wine</option>
+                </select>
 
-    <label for="size">Size:</label>
-    <input type="number" min="0" max="9999" name="size">
+                <select name="section" class="section" id="section-sake">
+                    <option selected disabled>SAKE Select a Section...</option>
+                    <option value="NIGORI">Nigori</option>
+                    <option value="JUNMAI & JUNMAI GINJO">Junmai & Junmai Ginjo</option>
+                    <option value="DAIGINJO">Daiginjo</option>
+                    <option value="JUNMAI DAIGINJO">Junmai Daiginjo</option>
+                    <option value="SPECIALTY">Specialty</option>
+                    <option value="SWEET">Sweet</option>
+                </select>
 
-    <br><br>
+                <select name="section" class="section" id="section-champagne">
+                    <option selected disabled>CHAMPAGNE Select a Section...</option>
+                    <option value="NON-VINTAGE">Non-Vintage</option>
+                    <option value="VINTAGE">Vintage</option>
+                    <option value="ROSÉ">Rosé</option>
+                </select>
 
-    <label for="price">Price: $</label>
-    <input type="number" min="0" max="99999" name="price" required>
+                <select name="section" class="section" id="section-white-wine">
+                    <option selected disabled>WHITE Select a Section...</option>
+                    <option value="ITALY">Italy</option>
+                    <option value="FRANCE">France</option>
+                    <option value="AUSTRIA">Austria</option>
+                    <option value="GERMANY">Germany</option>
+                    <option value="SPAIN">Spain</option>
+                    <option value="PORTUGAL">Portugal</option>
+                    <option value="ISRAEL">Israel</option>
+                    <option value="UNITED STATES">United States</option>
+                    <option value="NEW ZEALAND">New Zealand</option>
+                    <option value="AUSTRALIA">Australia</option>
+                    <option value="ARGENTINA">Argentina</option>
+                    <option value="SOUTH AFRICA">South Africa</option>
+                </select>
 
-    <br><br>
+                <select name="section" class="section" id="section-rosé-wine">
+                    <option selected disabled>ROSÉ Select a Section...</option>
+                    <option value="FRANCE">France</option>
+                    <option value="ITALY">Italy</option>
+                </select>
 
-    <label for="sequence">Sequence:</label>
-    <input type="number" min="-1" max="99" name="sequence">
+                <select name="section" class="section" id="section-red-wine">
+                    <option selected disabled>RED Select a Section...</option>
+                    <option value="ITALY">Italy</option>
+                    <option value="FRANCE">France</option>
+                    <option value="AUSTRIA">Austria</option>
+                    <option value="GERMANY">Germany</option>
+                    <option value="SPAIN">Spain</option>
+                    <option value="PORTUGAL">Portugal</option>
+                    <option value="ISRAEL">Israel</option>
+                    <option value="UNITED STATES">United States</option>
+                    <option value="LEBANON">Lebanon</option>
+                    <option value="NEW ZEALAND">New Zealand</option>
+                    <option value="CHILE">Chile</option>
+                    <option value="SOUTH AFRICA">South Africa</option>
+                </select>
 
-    <br><br>
+                <select class="section" name="section" id="section-sweet-wine">
+                    <option selected disabled>SWEET Select a Section...</option>
+                    <option value="FRANCE">France</option>
+                    <option value="ITALY">Italy</option>
+                    <option value="AUSTRIA">Austria</option>
+                    <option value="HUNGARY">Hungary</option>
+                    <option value="CANADA">Canada</option>
+                    <option value="GERMANY">Germany</option>
+                    <option value="SPAIN">Spain</option>
+                </select>
 
-    <button type="submit" style="cursor:pointer">Create New Menu Item</button>
-</form>
+                <select class="section" name="section" id="section-fortified-wine">
+                    <option selected disabled>FORTIFIED Select a Section...</option>
+                    <option value="">Portugal</option>
+                    <option value="">Madeira</option>
+                </select>
+    
+                <select class="section" style="visibility:visible;">
+                    <option selected disabled>Select a Section...</option>
+                </select>
+
+            </div>
+
+
+
+
+
+
+
+
+            <br><br>
+            <label for="bin">Bin#:</label><br>
+            <input type="number" min="0" max="9999" name="bin">
+
+            <br><br>
+            <label for="description">Description:</label><br>
+            <input type="text" name="description" maxlength="50" size="60">
+
+            <br><br>
+            <label for="vintage_size">Vintage:</label><br>
+            <input type="text" name="vintage_size" maxlength="4" style="width:5ch">
+
+            <br><br>
+            <label for="price">Price:</label><br>
+            <input type="number" name="price" min="0" max="99999">
+
+            <br><br>
+            <label for="cost">Cost:</label><br>
+            <input type="number" name="cost" min="0" max="99999">
+
+            <br><br>
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" min="0" max="999">
+
+            <br><br><br>
+            <button type="submit">Save</button>
+            <br><br>
+        </form>
+    </div>
+    
+    <div id="spirit-form"></div>
+        
+
+
+    <script>
+        function showSection(){
+            const sections = document.querySelectorAll('.section')
+            sections.forEach(section=>section.style.visibility = 'hidden')
+            const type = document.querySelector('#type').value
+            console.log(type)
+            document.querySelector('#label-section').style.visibility = 'visible'
+            if(type == 'BY THE GLASS') document.querySelector('#section-btg').style.visibility = 'visible'
+            if(type == 'HALF BOTTLES') document.querySelector('#section-half-bottle').style.visibility = 'visible'
+            if(type == 'LARGE FORMATS') document.querySelector('#section-large-format').style.visibility = 'visible'
+            if(type == 'SAKE') document.querySelector('#section-sake').style.visibility = 'visible'
+            if(type == 'SPARKLING') document.querySelector('#label-section').style.visibility = 'hidden'
+            if(type == 'CHAMPAGNE') document.querySelector('#section-champagne').style.visibility = 'visible'
+            if(type == 'WHITE WINE') document.querySelector('#section-white-wine').style.visibility = 'visible'
+            if(type == 'ROSÉ WINE') document.querySelector('#section-rosé-wine').style.visibility = 'visible'
+            if(type == 'RED WINE') document.querySelector('#section-red-wine').style.visibility = 'visible'
+            if(type == 'SWEET WINE') document.querySelector('#section-sweet-wine').style.visibility = 'visible'
+            if(type == 'FORTIFIED WINE') document.querySelector('#section-fortified-wine').style.visibility = 'visible'
+        }
+        const wineType = document.querySelector('#type')
+        wineType.addEventListener('change', showSection)
+    </script>
+</body>
+</html>
 
