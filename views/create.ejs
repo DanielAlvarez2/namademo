@@ -58,10 +58,12 @@
             border-radius:10px;
             cursor:pointer;
         }
-        #section-wrapper{
+        #section-wrapper,
+        #category-wrapper{
             position:relative;
         }
-        .section{
+        .section,
+        .category{
             position:absolute;
             visibility:hidden;
         }
@@ -210,6 +212,88 @@
 
             <div id="category-wrapper">
 
+                <select class="category" id="white-wine-italy" name="category">
+                    <option selected disabled>WHITE ITALY Select a Category...</option>
+                    <option value="PIEDMONT">Piedmont</option>
+                    <option value="ALTO ADIGE">Alto Adige</option>
+                    <option value="FRIULI-VENEZIA GIULIA">Friuli-Venezia Giulia</option>
+                    <option value="VENETO">Veneto</option>
+                    <option value="TUSCANY">Tuscany</option>
+                    <option value="UMBRIA">Umbria</option>
+                    <option value="SICILY">Sicily</option>
+                </select>
+
+                <select class="category" id="white-wine-france" name="category">
+                    <option selected disabled>WHITE FRANCE Select a Category</option>
+                    <option value="BURGUNDY">Burgundy</option>
+                    <option value="BORDEAUX BLANC">Bordeaux Blanc</option>
+                    <option value="SAVOIE">Savoie</option>
+                    <option value="LOIRE VALLEY">Loire Valley</option>
+                    <option value="JURA">Jura</option>
+                    <option value="RHÔNE VALLEY">Rhône Valley</option>
+                    <option value="ALSACE">Alsace</option>
+                </select>
+
+                <select class="category" id="white-wine-germany" name="category">
+                    <option selected disabled>WHITE GERMANY Select a Category...</option>
+                    <option value="TROCKEN">Trocken</option>
+                    <option value="PRÄDIKATSWEIN & FEINHERB">Prädikatswein & Feinherb</option>
+                </select>
+
+                <select class="category" id="white-wine-united-states" name="category">
+                    <option selected disabled>WHITE USA Select a Category...</option>
+                    <option vlaue="CALIFORNIA">California</option>
+                    <option vlaue="OREGON">Oregon</option>
+                </select>
+
+                <select class="category" id="rosé-wine-france" name="category">
+                    <option selected disabled>ROSÉ FRANCE Select a Category</option>
+                    <option value="LOIRE VALLEY">Loire Valley</option>
+                    <option value="PROVENCE">Provence</option>
+                </select>
+
+                <select class="category" id="rosé-wine-italy" name="category">
+                    <option selected disabled>ROSÉ ITALY Select a Category</option>
+                    <option value="SICILY">Sicily</option>
+                </select>
+
+                <select class="category" id="red-wine-italy" name="category">
+                    <option selected disabled>RED ITALY Select a Category...</option>
+                    <option value="TRENTINO-ALTO ADIGE">Trentino-Alto Adige</option>
+                    <option value="PIEDMONT">Piedmont</option>
+                    <option value="VENETO">Veneto</option>
+                    <option value="FRIULI-VENEZIA GIULIA">Friuli-Venezia Giulia</option>
+                    <option value="TUSCANY">Tuscany</option>
+                    <option value="SICILY">Sicily</option>
+                </select>
+
+                <select class="category" id="red-wine-france" name="category">
+                    <option selected disabled>RED FRANCE Select a Category...</option>
+                    <option value="BURGUNDY">Burgundy</option>
+                    <option value="BEAUJOLAIS">Beaujolais</option>
+                    <option value="BORDEAUX">Bordeaux</option>
+                    <option value="LOIRE VALLEY">Loire Valley</option>
+                    <option value="RHÔNE VALLEY">Rhône Valley</option>
+                </select>
+
+                <select class="category" name="category" id="red-wine-spain">
+                    <option selected disabled>RED SPAIN Select a Category...</option>
+                    <option value="BIERZO">Bierzo</option>
+                    <option value="PRIORAT">Priorat</option>
+                    <option value="RÍAS BAIXAS">Rías Baixas</option>
+                    <option value="RIBERA DEL DUERO">Ribera del Duero</option>
+                    <option value="RIOJA">Rioja</option>
+                    <option value="CANARY ISLANDS">Canary Islands</option>
+                </select>
+
+                <select class="category" name="category" id="red-wine-united-states">
+                    <option selected disabled>RED USA Select a Category...</option>
+                    <option value="OREGON">Oregon</option>
+                    <option value="CALIFORNIA">California</option>
+                    <option value="WASHINGTON">Washington</option>
+                    <option value="NEW YORK">New York</option>
+                </select>
+
                 <select class="category" style="visibility:visible">
                     <option selected disabled>Select a Category</option>
                 </select>
@@ -245,6 +329,16 @@
             <label for="quantity">Quantity:</label><br>
             <input type="number" min="0" max="999">
 
+            <br><br>
+            <label for="status">Status:</label><br>
+            <select name="status">
+                <option selected disabled>Select a Status...</option>
+                <option value="pre-launch">Pre-Launch</option>
+                <option value="live">Live</option>
+                <option value="retired" disabled>Retired</option>
+            </select>
+
+
             <br><br><br>
             <button type="submit">Save</button>
             <br><br>
@@ -276,7 +370,31 @@
         }
         const wineType = document.querySelector('#type')
         wineType.addEventListener('change', showSection)
+
+
+
+
+        function sectionWhiteWineShowCategory(){
+            const categories = document.querySelectorAll('.category')
+            categories.forEach(category => category.style.visibility = 'hidden')
+            if (sectionWhiteWine.value == 'ITALY') document.querySelector('#white-wine-italy').style.visibility = 'visible'
+            if (sectionWhiteWine.value == 'FRANCE') document.querySelector('#white-wine-france').style.visibility = 'visible'
+            if (sectionWhiteWine.value == 'GERMANY') document.querySelector('#white-wine-germany').style.visibility = 'visible'
+            if (sectionWhiteWine.value == 'UNITED STATES') document.querySelector('#white-wine-united-states').style.visibility = 'visible'
+        }
+        const sectionWhiteWine = document.querySelector('#section-white-wine')
+        sectionWhiteWine.addEventListener('change', sectionWhiteWineShowCategory)
+
+
+
+        function sectionRoséWineShowCategory(){
+            const categories = document.querySelectorAll('.category')
+            categories.forEach(category => category.style.visibility = 'hidden')
+            if (sectionRoséWine.value == 'FRANCE') document.querySelector('#rosé-wine-france').style.visibility = 'visible'
+            if (sectionRoséWine.value == 'ITALY') document.querySelector('#rosé-wine-italy').style.visibility = 'visible'
+        }
+        const sectionRoséWine = document.querySelector('#section-rosé-wine')
+        sectionRoséWine.addEventListener('change', sectionRoséWineShowCategory`)
     </script>
 </body>
 </html>
-
