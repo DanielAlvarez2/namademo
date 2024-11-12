@@ -14,6 +14,7 @@
         #tab-flexbox{
             margin:0 auto;
             display:flex;
+            max-width:900px;
             width:95%;
             justify-content:space-between;
         }
@@ -41,6 +42,8 @@
             border-radius:0 0 10px 10px;
             padding:1rem;
             margin:0 auto;
+            margin-bottom: 20px;
+            max-width:900px;
             width:95%;
             background:lightblue;
             border-left:1px solid black;
@@ -372,10 +375,10 @@
         wineType.addEventListener('change', showSection)
 
 
+        const categories = document.querySelectorAll('.category')
 
 
         function sectionWhiteWineShowCategory(){
-            const categories = document.querySelectorAll('.category')
             categories.forEach(category => category.style.visibility = 'hidden')
             if (sectionWhiteWine.value == 'ITALY') document.querySelector('#white-wine-italy').style.visibility = 'visible'
             if (sectionWhiteWine.value == 'FRANCE') document.querySelector('#white-wine-france').style.visibility = 'visible'
@@ -388,13 +391,24 @@
 
 
         function sectionRoséWineShowCategory(){
-            const categories = document.querySelectorAll('.category')
             categories.forEach(category => category.style.visibility = 'hidden')
             if (sectionRoséWine.value == 'FRANCE') document.querySelector('#rosé-wine-france').style.visibility = 'visible'
             if (sectionRoséWine.value == 'ITALY') document.querySelector('#rosé-wine-italy').style.visibility = 'visible'
         }
         const sectionRoséWine = document.querySelector('#section-rosé-wine')
         sectionRoséWine.addEventListener('change', sectionRoséWineShowCategory)
+
+
+        function sectionRedWineShowCategory(){
+            categories.forEach(category => category.style.visibility = 'hidden')
+            if (sectionRedWine.value == 'ITALY') document.querySelector('#red-wine-italy').style.visibility = 'visible'
+            if (sectionRedWine.value == 'FRANCE') document.querySelector('#red-wine-france').style.visibility = 'visible'
+            if (sectionRedWine.value == 'SPAIN') document.querySelector('#red-wine-spain').style.visibility = 'visible'
+            if (sectionRedWine.value == 'UNITED STATES') document.querySelector('#red-wine-united-states').style.visibility = 'visible'
+        }
+        const sectionRedWine = document.querySelector('#section-red-wine')
+        sectionRedWine.addEventListener('change', sectionRedWineShowCategory)
+
     </script>
 </body>
 </html>
