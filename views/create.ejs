@@ -66,7 +66,8 @@
             position:relative;
         }
         .section,
-        .category{
+        .category,
+        .region{
             position:absolute;
             visibility:hidden;
         }
@@ -245,8 +246,8 @@
 
                 <select class="category" id="white-wine-united-states" name="category">
                     <option selected disabled>WHITE USA Select a Category...</option>
-                    <option vlaue="CALIFORNIA">California</option>
-                    <option vlaue="OREGON">Oregon</option>
+                    <option value="CALIFORNIA">California</option>
+                    <option value="OREGON">Oregon</option>
                 </select>
 
                 <select class="category" id="rosé-wine-france" name="category">
@@ -298,14 +299,156 @@
                 </select>
 
                 <select class="category" style="visibility:visible">
-                    <option selected disabled>Select a Category</option>
+                    <option selected disabled>Select a Category...</option>
                 </select>
 
             </div>
 
 
+            <br><br>
+            <label for="region">Region:</label><br>
+
+            <div id="region-wrapper">
 
 
+                <select class="region" name="region" id="white-wine-france-burgundy">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="BOURGOGNE ALIGOTÉ">Bourgogne Aligoté</option>
+                    <option value="BOURGOGNE BLANC">Bourgogne Blanc</option>
+                    <option value="CHABLIS">Chablis</option>
+                    <option value="AUXEY-DURESSES">Auxey-Duresses</option>
+                    <option value="HAUTES-CÔTES DE NUITS">Hautes-Côtes de Nuits</option>
+                    <option value="CORTON-CHARLEMAGNE">Corton-Charlemagne</option>
+                    <option value="MEURSAULT">Meursault</option>
+                    <option value="MONTHELIE">Monthelie</option>
+                    <option value="NUITS-SAINT-GEORGES">Nuits-Saint-Georges</option>
+                    <option value="CHEVALIER-MONTRACHET">Chevalier-Montrachet</option>
+                    <option value="PULIGNY-MONTRACHET">Puligny-Montrachet</option>
+                    <option value="BIENVENUES-BÂTARD-MONTRACHET">Bienvenues-Bâtard-Montrachet</option>
+                    <option value="BÂTARD-MONTRACHET">Bâtard-Montrachet</option>
+                    <option value="CHASSAGNE-MONTRACHET">Chassagne-Montrachet</option>
+                    <option value="MÂCON-VERZÉ">Mâcon-Verzé</option>
+                    <option value="MERCUREY">Mercurey</option>
+                    <option value="POUILLY-FUISSÉ">Pouilly-Fuissé</option>
+                    <option value="SAINT-VÉRAN">Saint-Véran</option>
+                </select>
+
+                <select class="region" name="region" id="white-wine-france-loire-valley">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="COULÉE DE SERRANT">Coulée de Serrant</option>
+                    <option value="SAVENNIÈRES">Savennières</option>
+                    <option value="SAUMUR">Saumur</option>
+                    <option value="SANCERRE">Sancerre</option>
+                    <option value="POUILLY-FUMÉ">Pouilly-Fumé</option>
+                    <option value="CÔTEAUX CHAMPENOIS">Côteaux Champenois</option>
+                </select>
+
+                <select class="region" name="region" id="white-wine-france-jura">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="ARBOIS">Arbois</option>
+                    <option value="CÔTES DU JURA">Côtes du Jura</option>
+                </select>
+
+                <select class="region" name="region" id="white-wine-united-states-california">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="PASO ROBLES">Paso Robles</option>
+                    <option value="SONOMA COAST">Sonoma Coast</option>
+                    <option value="RUSSIAN RIVER VALLEY">Russian River Valley</option>
+                    <option value="NAPA VALLEY">Napa Valley</option>
+                    <option value="SANTA CRUZ MOUNTAINS">Santa Cruz Mountains</option>
+                    <option value="SANTA BARBARA COUNTY">Santa Barbara County</option>
+                    <option value="SANTA RITA HILLS">Santa Rita Hills</option>
+                </select>
+
+                <select class="region" name="region" id="white-wine-united-states-oregon">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="EOLA-AMITY HILLS">Eola-Amity Hills</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-italy-piedmont">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="DOLCETTO DI DOGLIANI">Dolcetto di Dogliani</option>
+                    <option value="GATTINARA">Gattinara</option>
+                    <option value="LANGHE">Langhe</option>
+                    <option value="BARBARESCO DOCG">Barbaresco DOCG</option>
+                    <option value="BAROLO DOCG">Barolo DOCG</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-italy-tuscany">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="BOLGHERI DOC">Bolgheri DOC</option>
+                    <option value="TUSCANY IGT">TUSCANY IGT</option>
+                    <option value="CHIANTI CLASSICO DOCG">CHIANTI CLASSICO DOCG</option>
+                    <option value="ROSSO DI MONTALCINO">ROSSO DI MONTALCINO</option>
+                    <option value="BRUNELLO DI MONTALCINO DOCG">BRUNELLO DI MONTALCINO DOCG</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-france-burgundy">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="CÔTE DE NUITS">Côte de Nuits</option>
+                    <option value="CÔTE DE BEAUNE">Côte de Beaune</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-france-bordeaux">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="FIRST GROWTH">First Growth</option>
+                    <option value="HAUT-MÉDOC">Haut-Médoc</option>
+                    <option value="SAINT-ESTÈPHE">Saint-Estèphe</option>
+                    <option value="PAUILLAC">Pauillac</option>
+                    <option value="SAINT-JULIEN">Saint-Julien</option>
+                    <option value="MARGAUX">Margaux</option>
+                    <option value="GRAVES & PESSAC-LÉOGNAN">Graves & Pessac-Léognan</option>
+                    <option value="SAINT-ÉMILION">Saint-Émilion</option>
+                    <option value="POMEROL">Pomerol</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-france-loire-valley">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="CHINON">Chinon</option>
+                    <option value="SAUMUR">Saumur</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-france-rhône-valley">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="NORTHERN RHÔNE">Northern Rhône</option>
+                    <option value="SOUTHERN RHÔNE">Southern Rhône</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-united-states-oregon">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="WILLAMETTE VALLEY">Willamette Valley</option>
+                    <option value="EOLA-AMITY HILLS">Eola-Amity Hills</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-united-states-california">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="ANDERSON VALLEY">Anderson Valley</option>
+                    <option value="LODI">Lodi</option>
+                    <option value="SANTA RITA HILLS">Santa Rita Hills</option>
+                    <option value="SANTA YNEZ VALLEY">Santa Ynez Valley</option>
+                    <option value="SONOMA">Sonoma</option>
+                    <option value="PASO ROBLES">Paso Robles</option>
+                    <option value="RUSSIAN RIVER VALLEY">Russian River Valley</option>
+                    <option value="NAPA VALLEY">Napa Valley</option>
+                    <option value="ALEXANDER VALLEY">Alexander Valley</option>
+                    <option value="SANTA CRUZ MOUNTAINS">Santa Cruz Mountains</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-united-states-washington">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="COLUMBIA VALLEY">Columbia Valley</option>
+                </select>
+
+                <select class="region" name="region" id="red-wine-united-states-new-york">
+                    <option selected disabled>Select a Region...</option>
+                    <option value="NORTH FORK LONG ISLAND">North Fork Long Island</option>
+                </select>
+
+                <select class="region" style="visibility:visible">
+                    <option selected disabled>Select a Region...</option>
+                </select>
+
+            </div>
 
 
             <br><br>
@@ -408,6 +551,59 @@
         }
         const sectionRedWine = document.querySelector('#section-red-wine')
         sectionRedWine.addEventListener('change', sectionRedWineShowCategory)
+
+
+        const regions = document.querySelectorAll('.region')
+
+        function categoryWhiteWineFranceShowRegion(){
+            regions.forEach(region => region.style.visibility = 'hidden')
+            if(categoryWhiteWineFrance.value == 'BURGUNDY') document.querySelector('#white-wine-france-burgundy').style.visibility = 'visible'
+            if(categoryWhiteWineFrance.value == 'LOIRE VALLEY') document.querySelector('#white-wine-france-loire-valley').style.visibility = 'visible'
+            if(categoryWhiteWineFrance.value == 'JURA') document.querySelector('#white-wine-france-jura').style.visibility = 'visible'
+        }
+        const categoryWhiteWineFrance = document.querySelector('#white-wine-france')
+        categoryWhiteWineFrance.addEventListener('change', categoryWhiteWineFranceShowRegion)
+
+        function categoryWhiteWineUnitedStatesShowRegion(){
+            regions.forEach(region => region.style.visibility = 'hidden')
+            console.log(categoryWhiteWineUnitedStates.value)
+            if(categoryWhiteWineUnitedStates.value == 'CALIFORNIA') document.querySelector('#white-wine-united-states-california').style.visibility = 'visible'
+            if(categoryWhiteWineUnitedStates.value == 'OREGON') document.querySelector('#white-wine-united-states-oregon').style.visibility = 'visible'
+        }
+        const categoryWhiteWineUnitedStates = document.querySelector('#white-wine-united-states')
+        categoryWhiteWineUnitedStates.addEventListener('change', categoryWhiteWineUnitedStatesShowRegion)
+
+        function categoryRedWineItalyShowRegion(){
+            regions.forEach(region => region.style.visibility = 'hidden')
+            if(categoryRedWineItaly.value == 'PIEDMONT') document.querySelector('#red-wine-italy-piedmont').style.visibility = 'visible'
+            if(categoryRedWineItaly.value == 'TUSCANY') document.querySelector('#red-wine-italy-tuscany').style.visibility = 'visible'
+        }
+        const categoryRedWineItaly = document.querySelector('#red-wine-italy')
+        categoryRedWineItaly.addEventListener('change', categoryRedWineItalyShowRegion)
+
+        function categoryRedWineFranceShowRegion(){
+            regions.forEach(region => region.style.visibility = 'hidden')
+            if(categoryRedWineFrance.value == 'BURGUNDY') document.querySelector('#red-wine-france-burgundy').style.visibility = 'visible'
+            if(categoryRedWineFrance.value == 'BORDEAUX') document.querySelector('#red-wine-france-bordeaux').style.visibility = 'visible'
+            if(categoryRedWineFrance.value == 'LOIRE VALLEY') document.querySelector('#red-wine-france-loire-valley').style.visibility = 'visible'
+            if(categoryRedWineFrance.value == 'RHÔNE VALLEY') document.querySelector('#red-wine-france-rhône-valley').style.visibility = 'visible'
+        }
+        const categoryRedWineFrance = document.querySelector('#red-wine-france')
+        categoryRedWineFrance.addEventListener('change', categoryRedWineFranceShowRegion)
+
+        function categoryRedWineUnitedStatesShowRegion(){
+            regions.forEach(region => region.style.visibility = 'hidden')
+            if(categoryRedWineUnitedStates.value == 'OREGON') document.querySelector('#red-wine-united-states-oregon').style.visibility = 'visible'
+            if(categoryRedWineUnitedStates.value == 'CALIFORNIA') document.querySelector('#red-wine-united-states-california').style.visibility = 'visible'
+            if(categoryRedWineUnitedStates.value == 'WASHINGTON') document.querySelector('#red-wine-united-states-washington').style.visibility = 'visible'
+            if(categoryRedWineUnitedStates.value == 'NEW YORK') document.querySelector('#red-wine-united-states-new-york').style.visibility = 'visible'
+        }
+        const categoryRedWineUnitedStates = document.querySelector('#red-wine-united-states')
+        categoryRedWineUnitedStates.addEventListener('change', categoryRedWineUnitedStatesShowRegion)
+
+    
+
+
 
     </script>
 </body>
