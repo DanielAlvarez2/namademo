@@ -90,7 +90,7 @@
 
             <label for="type">Type of Wine:</label><br>
             <select id="type" name="type" required>
-                <option disabled selected>Select Wine Type...</option>
+                <option disabled selected value="default">Select Wine Type...</option>
                 <option value="BY THE GLASS">By The Glass</option>
                 <option value="HALF BOTTLES">Half Bottle</option>
                 <option value="LARGE FORMATS">Large Format</option>
@@ -104,13 +104,13 @@
                 <option value="FORTIFIED WINE">Fortified Wine</option>
             </select>
 
-            <br><br>
-            <label for="section" id="label-section">Section:</label><br>
             
             <div id="section-wrapper">
-
+                <br>
+                <label for="section" id="label-section">Section:</label><br>
+    
                 <select class="section" id="section-btg" name="section">
-                    <option disabled selected>BTG Select a Section...</option>
+                    <option disabled selected value="default">Select a Section...</option>
                     <option value="SAKE">Sake</option>
                     <option value="CARAFE">Carafe</option>
                     <option value="CHAMPAGNE">Champagne</option>
@@ -121,7 +121,7 @@
                 </select>
 
                 <select class="section" id="section-half-bottle" name="section">
-                    <option disabled selected>1/2BTL Select a Section...</option>
+                    <option disabled selected value="default">Select a Section...</option>
                     <option value="CHAMPAGNE">Champagne</option>
                     <option value="WHITE WINE">White Wine</option>
                     <option value="RED WINE">Red Wine</option>
@@ -129,7 +129,7 @@
                 </select>
 
                 <select name="section" class="section" id="section-large-format">
-                    <option disabled selected>LARGE FORMAT Select a Section...</option>
+                    <option disabled selected value="default">Select a Section...</option>
                     <option value="SPARKLING & CHAMPAGNE">Sparkling & Champagne</option>
                     <option value="WHITE WINE">White Wine</option>
                     <option value="ROSÉ WINE">Rosé Wine</option>
@@ -137,7 +137,7 @@
                 </select>
 
                 <select name="section" class="section" id="section-sake">
-                    <option selected disabled>SAKE Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="NIGORI">Nigori</option>
                     <option value="JUNMAI & JUNMAI GINJO">Junmai & Junmai Ginjo</option>
                     <option value="DAIGINJO">Daiginjo</option>
@@ -147,14 +147,14 @@
                 </select>
 
                 <select name="section" class="section" id="section-champagne">
-                    <option selected disabled>CHAMPAGNE Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="NON-VINTAGE">Non-Vintage</option>
                     <option value="VINTAGE">Vintage</option>
                     <option value="ROSÉ">Rosé</option>
                 </select>
 
                 <select name="section" class="section" id="section-white-wine">
-                    <option selected disabled>WHITE Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="ITALY">Italy</option>
                     <option value="FRANCE">France</option>
                     <option value="AUSTRIA">Austria</option>
@@ -170,13 +170,13 @@
                 </select>
 
                 <select name="section" class="section" id="section-rosé-wine">
-                    <option selected disabled>ROSÉ Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="FRANCE">France</option>
                     <option value="ITALY">Italy</option>
                 </select>
 
                 <select name="section" class="section" id="section-red-wine">
-                    <option selected disabled>RED Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="ITALY">Italy</option>
                     <option value="FRANCE">France</option>
                     <option value="AUSTRIA">Austria</option>
@@ -192,7 +192,7 @@
                 </select>
 
                 <select class="section" name="section" id="section-sweet-wine">
-                    <option selected disabled>SWEET Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="FRANCE">France</option>
                     <option value="ITALY">Italy</option>
                     <option value="AUSTRIA">Austria</option>
@@ -203,24 +203,24 @@
                 </select>
 
                 <select class="section" name="section" id="section-fortified-wine">
-                    <option selected disabled>FORTIFIED Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                     <option value="">Portugal</option>
                     <option value="">Madeira</option>
                 </select>
     
                 <select class="section" style="visibility:visible;">
-                    <option selected disabled>Select a Section...</option>
+                    <option selected disabled value="default">Select a Section...</option>
                 </select>
 
             </div>
 
-            <br><br>
-            <label for="category">Category:</label><br>
 
             <div id="category-wrapper">
-
+                <br><br>
+                <label for="category">Category:</label><br>
+    
                 <select class="category" id="white-wine-italy" name="category">
-                    <option selected disabled>WHITE ITALY Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="PIEDMONT">Piedmont</option>
                     <option value="ALTO ADIGE">Alto Adige</option>
                     <option value="FRIULI-VENEZIA GIULIA">Friuli-Venezia Giulia</option>
@@ -231,7 +231,7 @@
                 </select>
 
                 <select class="category" id="white-wine-france" name="category">
-                    <option selected disabled>WHITE FRANCE Select a Category</option>
+                    <option selected disabled value="default">Select a Category</option>
                     <option value="BURGUNDY">Burgundy</option>
                     <option value="BORDEAUX BLANC">Bordeaux Blanc</option>
                     <option value="SAVOIE">Savoie</option>
@@ -242,30 +242,30 @@
                 </select>
 
                 <select class="category" id="white-wine-germany" name="category">
-                    <option selected disabled>WHITE GERMANY Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="TROCKEN">Trocken</option>
                     <option value="PRÄDIKATSWEIN & FEINHERB">Prädikatswein & Feinherb</option>
                 </select>
 
                 <select class="category" id="white-wine-united-states" name="category">
-                    <option selected disabled>WHITE USA Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="CALIFORNIA">California</option>
                     <option value="OREGON">Oregon</option>
                 </select>
 
                 <select class="category" id="rosé-wine-france" name="category">
-                    <option selected disabled>ROSÉ FRANCE Select a Category</option>
+                    <option selected disabled value="default">Select a Category</option>
                     <option value="LOIRE VALLEY">Loire Valley</option>
                     <option value="PROVENCE">Provence</option>
                 </select>
 
                 <select class="category" id="rosé-wine-italy" name="category">
-                    <option selected disabled>ROSÉ ITALY Select a Category</option>
+                    <option selected disabled value="default">Select a Category</option>
                     <option value="SICILY">Sicily</option>
                 </select>
 
                 <select class="category" id="red-wine-italy" name="category">
-                    <option selected disabled>RED ITALY Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="TRENTINO-ALTO ADIGE">Trentino-Alto Adige</option>
                     <option value="PIEDMONT">Piedmont</option>
                     <option value="VENETO">Veneto</option>
@@ -275,7 +275,7 @@
                 </select>
 
                 <select class="category" id="red-wine-france" name="category">
-                    <option selected disabled>RED FRANCE Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="BURGUNDY">Burgundy</option>
                     <option value="BEAUJOLAIS">Beaujolais</option>
                     <option value="BORDEAUX">Bordeaux</option>
@@ -284,7 +284,7 @@
                 </select>
 
                 <select class="category" name="category" id="red-wine-spain">
-                    <option selected disabled>RED SPAIN Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="BIERZO">Bierzo</option>
                     <option value="PRIORAT">Priorat</option>
                     <option value="RÍAS BAIXAS">Rías Baixas</option>
@@ -294,28 +294,28 @@
                 </select>
 
                 <select class="category" name="category" id="red-wine-united-states">
-                    <option selected disabled>RED USA Select a Category...</option>
+                    <option selected disabled value="default">Select a Category...</option>
                     <option value="OREGON">Oregon</option>
                     <option value="CALIFORNIA">California</option>
                     <option value="WASHINGTON">Washington</option>
                     <option value="NEW YORK">New York</option>
                 </select>
 
-                <select class="category" style="visibility:visible">
-                    <option selected disabled>Select a Category...</option>
+                <select id="category-default" class="category" style="visibility:visible">
+                    <option selected disabled value="default">Select a Category...</option>
                 </select>
 
             </div>
 
 
-            <br><br>
-            <label for="region">Region:</label><br>
 
             <div id="region-wrapper">
 
-
+                <br><br>
+                <label for="region">Region:</label><br>
+    
                 <select class="region" name="region" id="white-wine-france-burgundy">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="BOURGOGNE ALIGOTÉ">Bourgogne Aligoté</option>
                     <option value="BOURGOGNE BLANC">Bourgogne Blanc</option>
                     <option value="CHABLIS">Chablis</option>
@@ -337,7 +337,7 @@
                 </select>
 
                 <select class="region" name="region" id="white-wine-france-loire-valley">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="COULÉE DE SERRANT">Coulée de Serrant</option>
                     <option value="SAVENNIÈRES">Savennières</option>
                     <option value="SAUMUR">Saumur</option>
@@ -347,13 +347,13 @@
                 </select>
 
                 <select class="region" name="region" id="white-wine-france-jura">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="ARBOIS">Arbois</option>
                     <option value="CÔTES DU JURA">Côtes du Jura</option>
                 </select>
 
                 <select class="region" name="region" id="white-wine-united-states-california">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="PASO ROBLES">Paso Robles</option>
                     <option value="SONOMA COAST">Sonoma Coast</option>
                     <option value="RUSSIAN RIVER VALLEY">Russian River Valley</option>
@@ -364,12 +364,12 @@
                 </select>
 
                 <select class="region" name="region" id="white-wine-united-states-oregon">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="EOLA-AMITY HILLS">Eola-Amity Hills</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-italy-piedmont">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="DOLCETTO DI DOGLIANI">Dolcetto di Dogliani</option>
                     <option value="GATTINARA">Gattinara</option>
                     <option value="LANGHE">Langhe</option>
@@ -378,7 +378,7 @@
                 </select>
 
                 <select class="region" name="region" id="red-wine-italy-tuscany">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="BOLGHERI DOC">Bolgheri DOC</option>
                     <option value="TUSCANY IGT">TUSCANY IGT</option>
                     <option value="CHIANTI CLASSICO DOCG">CHIANTI CLASSICO DOCG</option>
@@ -387,13 +387,13 @@
                 </select>
 
                 <select class="region" name="region" id="red-wine-france-burgundy">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="CÔTE DE NUITS">Côte de Nuits</option>
                     <option value="CÔTE DE BEAUNE">Côte de Beaune</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-france-bordeaux">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="FIRST GROWTH">First Growth</option>
                     <option value="HAUT-MÉDOC">Haut-Médoc</option>
                     <option value="SAINT-ESTÈPHE">Saint-Estèphe</option>
@@ -406,25 +406,25 @@
                 </select>
 
                 <select class="region" name="region" id="red-wine-france-loire-valley">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="CHINON">Chinon</option>
                     <option value="SAUMUR">Saumur</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-france-rhône-valley">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="NORTHERN RHÔNE">Northern Rhône</option>
                     <option value="SOUTHERN RHÔNE">Southern Rhône</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-united-states-oregon">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="WILLAMETTE VALLEY">Willamette Valley</option>
                     <option value="EOLA-AMITY HILLS">Eola-Amity Hills</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-united-states-california">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="ANDERSON VALLEY">Anderson Valley</option>
                     <option value="LODI">Lodi</option>
                     <option value="SANTA RITA HILLS">Santa Rita Hills</option>
@@ -438,30 +438,31 @@
                 </select>
 
                 <select class="region" name="region" id="red-wine-united-states-washington">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="COLUMBIA VALLEY">Columbia Valley</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-united-states-new-york">
-                    <option selected disabled>Select a Region...</option>
+                    <option selected disabled value="default">Select a Region...</option>
                     <option value="NORTH FORK LONG ISLAND">North Fork Long Island</option>
                 </select>
 
-                <select class="region" style="visibility:visible">
-                    <option selected disabled>Select a Region...</option>
+                <select id="region-default" class="region" style="visibility:visible">
+                    <option selected disabled value="default">Select a Region...</option>
                 </select>
 
             </div>
 
 
 
-            <br><br>
-            <label for="subregion">Sub-Region:</label><br>
 
             <div id="subregion-wrapper">
 
+                <br><br>
+                <label for="subregion">Sub-Region:</label><br>
+    
                 <select class="subregion" name="subregion" id="red-wine-italy-piedmont-barolo-docg">
-                    <option selected disabled>Select a Sub-Region...</option>
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                     <option value="BAROLO">Barolo</option>
                     <option value="CANNUBI">Cannubi</option>
                     <option value="CASTIGLIONE">Castiglione</option>
@@ -473,7 +474,7 @@
                 </select>
 
                 <select class="subregion" name="subregion" id="red-wine-france-burgundy-côte-de-nuits">
-                    <option selected disabled>Select a Sub-Region...</option>
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                     <option value="BOURGOGNE ROUGE">Bourgogne Rouge</option>
                     <option value="GEVREY-CHAMBERTIN">Gevrey-Chambertin</option>
                     <option value="CLOS DE BÈZE">Clos de Bèze</option>
@@ -498,7 +499,7 @@
                 </select>
 
                 <select class="subregion" name="subregion" id="red-wine-france-burgundy-côte-de-beaune">
-                    <option selected disabled>Select a Sub-Region...</option>
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                     <option value="CHASSAGNE-MONTRACHET">Chassagne-Montrachet</option>
                     <option value="CHOREY-LES-BEAUNE">Chorey-les-Beaune</option>
                     <option value="CORTON GRAND CRU">Corton Grand Cru</option>
@@ -511,14 +512,14 @@
                 </select>
 
                 <select class="subregion" name="subregion" id="red-wine-france-bordeaux-first-growth">
-                    <option selected disabled>Select a Sub-Region...</option>
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                     <option value="GRAVES & PESSAC-LÉOGNAN">Graves & Pessac-Leognan</option>
                     <option value="PAUILLAC">Pauillac</option>
                     <option value="MARGAUX">Margaux</option>
                 </select>
 
                 <select class="subregion" name="subregion" id="red-wine-france-rhône-valley-northern-rhône">
-                    <option selected disabled>Select a Sub-Region...</option>
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                     <option value="CÔTE-RÔTIE">Côte-Rôtie</option>
                     <option value="CORNAS">Cornas</option>
                     <option value="CROZES-HERMITAGE">Crozes-Hermitage</option>
@@ -527,14 +528,14 @@
                 </select>
 
                 <select class="subregion" name="subregion" id="red-wine-france-rhône-valley-southern-rhône">
-                    <option selected disabled>Select a Sub-Region...</option>
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                     <option value="CHÂTEAUNEUF-DU-PAPE">Châteauneuf-du-Pape</option>
                     <option value="VACQUEYRAS">Vacqueyras</option>
                 </select>
 
 
-                <select class="subregion" style="visibility:visible">
-                    <option selected disabled>Select a Sub-Region...</option>
+                <select id="subregion-default" class="subregion" style="visibility:visible">
+                    <option selected disabled value="default">Select a Sub-Region...</option>
                 </select>
                 
             </div>
@@ -587,23 +588,66 @@
 
 
     <script>
+
+        const sectionWrapper = document.querySelector('#section-wrapper')
+        const categoryWrapper = document.querySelector('#category-wrapper')
+        const regionWrapper = document.querySelector('#region-wrapper')
+        const subregionWrapper = document.querySelector('#subregion-wrapper')
+
         function showSection(){
             const sections = document.querySelectorAll('.section')
             sections.forEach(section=>section.style.visibility = 'hidden')
             const type = document.querySelector('#type').value
-            console.log(type)
-            document.querySelector('#label-section').style.visibility = 'visible'
-            if(type == 'BY THE GLASS') document.querySelector('#section-btg').style.visibility = 'visible'
-            if(type == 'HALF BOTTLES') document.querySelector('#section-half-bottle').style.visibility = 'visible'
-            if(type == 'LARGE FORMATS') document.querySelector('#section-large-format').style.visibility = 'visible'
-            if(type == 'SAKE') document.querySelector('#section-sake').style.visibility = 'visible'
-            if(type == 'SPARKLING') document.querySelector('#label-section').style.visibility = 'hidden'
-            if(type == 'CHAMPAGNE') document.querySelector('#section-champagne').style.visibility = 'visible'
-            if(type == 'WHITE WINE') document.querySelector('#section-white-wine').style.visibility = 'visible'
-            if(type == 'ROSÉ WINE') document.querySelector('#section-rosé-wine').style.visibility = 'visible'
-            if(type == 'RED WINE') document.querySelector('#section-red-wine').style.visibility = 'visible'
-            if(type == 'SWEET WINE') document.querySelector('#section-sweet-wine').style.visibility = 'visible'
-            if(type == 'FORTIFIED WINE') document.querySelector('#section-fortified-wine').style.visibility = 'visible'
+            if(type == 'BY THE GLASS') {
+                document.querySelector('#section-btg').style.visibility = 'visible'
+                document.querySelector('#section-btg').value = 'default'
+                categoryWrapper.style.visibility = 'hidden'
+                regionWrapper.style.visibility = 'hidden'
+                subregionWrapper.style.visibility = 'hidden'
+                document.querySelector('#category-default').style.visibility = 'hidden'
+                document.querySelector('#region-default').style.visibility = 'hidden'
+                document.querySelector('#subregion-default').style.visibility = 'hidden'
+
+            }
+            if(type == 'HALF BOTTLES') {
+                document.querySelector('#section-half-bottle').style.visibility = 'visible'
+                document.querySelector('#section-half-bottle').value = 'default'
+            }
+            if(type == 'LARGE FORMATS') {
+                document.querySelector('#section-large-format').style.visibility = 'visible'
+                document.querySelector('#section-large-format').value = 'default'
+            }
+            if(type == 'SAKE') {
+                document.querySelector('#section-sake').style.visibility = 'visible'
+                document.querySelector('#section-sake').value = 'default'
+            }
+            if(type == 'SPARKLING') {
+                sectionWrapper.style.visibility = 'hidden'
+            }
+            if(type == 'CHAMPAGNE') {
+                document.querySelector('#section-champagne').style.visibility = 'visible'
+                document.querySelector('#section-champagne').value = 'default'
+            }
+            if(type == 'WHITE WINE') {
+                document.querySelector('#section-white-wine').style.visibility = 'visible'
+                document.querySelector('#section-white-wine').value = 'default'
+            }
+            if(type == 'ROSÉ WINE') {
+                document.querySelector('#section-rosé-wine').style.visibility = 'visible'
+                document.querySelector('#section-rosé-wine').value = 'default'
+            }
+            if(type == 'RED WINE') {
+                document.querySelector('#section-red-wine').style.visibility = 'visible'
+                document.querySelector('#section-red-wine').value = 'default'
+            }
+            if(type == 'SWEET WINE') {
+                document.querySelector('#section-sweet-wine').style.visibility = 'visible'
+                document.querySelector('#section-sweet-wine').value = 'default'
+            }
+            if(type == 'FORTIFIED WINE') {
+                document.querySelector('#section-fortified-wine').style.visibility = 'visible'
+                document.querySelector('#section-fortified-wine').value = 'default'
+            }
         }
         const wineType = document.querySelector('#type')
         wineType.addEventListener('change', showSection)
