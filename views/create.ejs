@@ -62,12 +62,15 @@
             cursor:pointer;
         }
         #section-wrapper,
-        #category-wrapper{
+        #category-wrapper,
+        #region-wrapper,
+        #subregion-wrapper{
             position:relative;
         }
         .section,
         .category,
-        .region{
+        .region,
+        .subregion{
             position:absolute;
             visibility:hidden;
         }
@@ -451,6 +454,91 @@
             </div>
 
 
+
+            <br><br>
+            <label for="subregion">Sub-Region:</label><br>
+
+            <div id="subregion-wrapper">
+
+                <select class="subregion" name="subregion" id="red-wine-italy-piedmont-barolo-docg">
+                    <option selected disabled>Select a Sub-Region...</option>
+                    <option value="BAROLO">Barolo</option>
+                    <option value="CANNUBI">Cannubi</option>
+                    <option value="CASTIGLIONE">Castiglione</option>
+                    <option value="LA MORRA">La Morra</option>
+                    <option value="MONFORTE D'ALBA">Monforte d'Alba</option>
+                    <option value="SERRALUNGA D'ALBA">Serralunga d'Alba</option>
+                    <option value="VERDUNO">Verduno</option>
+                    <option value="PELAVERGA">Pelaverga</option>
+                </select>
+
+                <select class="subregion" name="subregion" id="red-wine-france-burgundy-côte-de-nuits">
+                    <option selected disabled>Select a Sub-Region...</option>
+                    <option value="BOURGOGNE ROUGE">Bourgogne Rouge</option>
+                    <option value="GEVREY-CHAMBERTIN">Gevrey-Chambertin</option>
+                    <option value="CLOS DE BÈZE">Clos de Bèze</option>
+                    <option value="CHAMBERTIN">Chambertin</option>
+                    <option value="MAZIS-CHAMBERTIN">Mazis-Chambertin</option>
+                    <option value="CHAPELLE-CHAMBERTIN">Chapelle-Chambertin</option>
+                    <option value="CHARMES-CHAMBERTIN">Charmes-Chambertin</option>
+                    <option value="MOREY-SAINT-DENIS">Morey-Saint-Denis</option>
+                    <option value="CLOS DE LA ROCHE">Clos de la Roche</option>
+                    <option value="CLOS DES LAMBRAYS">Clos des Lambrays</option>
+                    <option value="CLOS-SAINT-DENIS">Clos-Saint-Denis</option>
+                    <option value="BONNES-MARES">Bonnes-Mares</option>
+                    <option value="ÉCHÉZEAUX">Échézeaux</option>
+                    <option value="GRANDS ÉCHÉZEAUX">Grands Échézeaux</option>
+                    <option value="CLOS DE VOUGEOT">Clos de Vougeot</option>
+                    <option value="VOSNE-ROMANÉE">Vosne-Romanée</option>
+                    <option value="CHAMBOLLE-MUSIGNY">Chambolle-Musigny</option>
+                    <option value="RICHEBOURG">Richebourg</option>
+                    <option value="ROMANÉE-SAINT-VIVANT">Romanée-Saint-Vivant</option>
+                    <option value="NUITS-SAINT-GEORGES">Nuits-Saint-Georges</option>
+                    <option value="FIXIN">Fixin</option>
+                </select>
+
+                <select class="subregion" name="subregion" id="red-wine-france-burgundy-côte-de-beaune">
+                    <option selected disabled>Select a Sub-Region...</option>
+                    <option value="CHASSAGNE-MONTRACHET">Chassagne-Montrachet</option>
+                    <option value="CHOREY-LES-BEAUNE">Chorey-les-Beaune</option>
+                    <option value="CORTON GRAND CRU">Corton Grand Cru</option>
+                    <option value="BEAUNE">Beaune</option>
+                    <option value="MONTHÉLIE">Monthélie</option>
+                    <option value="POMMARD">Pommard</option>
+                    <option value="VOLNAY">Volnay</option>
+                    <option value="SAVIGNY-LÈS-BEAUNE">Savigny-lès-Beaune</option>
+                    <option value="MERCUREY">Mercurey</option>
+                </select>
+
+                <select class="subregion" name="subregion" id="red-wine-france-bordeaux-first-growth">
+                    <option selected disabled>Select a Sub-Region...</option>
+                    <option value="GRAVES & PESSAC-LÉOGNAN">Graves & Pessac-Leognan</option>
+                    <option value="PAUILLAC">Pauillac</option>
+                    <option value="MARGAUX">Margaux</option>
+                </select>
+
+                <select class="subregion" name="subregion" id="red-wine-france-rhône-valley-northern-rhône">
+                    <option selected disabled>Select a Sub-Region...</option>
+                    <option value="CÔTE-RÔTIE">Côte-Rôtie</option>
+                    <option value="CORNAS">Cornas</option>
+                    <option value="CROZES-HERMITAGE">Crozes-Hermitage</option>
+                    <option value="HERMITAGE">Hermitage</option>
+                    <option value="SAINT-JOSEPH">Saint-Joseph</option>
+                </select>
+
+                <select class="subregion" name="subregion" id="red-wine-france-rhône-valley-southern-rhône">
+                    <option selected disabled>Select a Sub-Region...</option>
+                    <option value="CHÂTEAUNEUF-DU-PAPE">Châteauneuf-du-Pape</option>
+                    <option value="VACQUEYRAS">Vacqueyras</option>
+                </select>
+
+
+                <select class="subregion" style="visibility:visible">
+                    <option selected disabled>Select a Sub-Region...</option>
+                </select>
+                
+            </div>
+
             <br><br>
             <label for="bin">Bin#:</label><br>
             <input type="number" min="0" max="9999" name="bin">
@@ -490,7 +578,10 @@
             <br><br>
         </form>
     </div>
+
     
+
+
     <div id="spirit-form"></div>
         
 
@@ -601,8 +692,37 @@
         const categoryRedWineUnitedStates = document.querySelector('#red-wine-united-states')
         categoryRedWineUnitedStates.addEventListener('change', categoryRedWineUnitedStatesShowRegion)
 
-    
+        const subregions = document.querySelectorAll('.subregion')
 
+        function regionRedWineItalyPiedmontShowSubregion(){
+            subregions.forEach(subregion => subregion.style.visibility = 'hidden')
+            if(regionRedWineItalyPiedmont.value == 'BAROLO DOCG') document.querySelector('#red-wine-italy-piedmont-barolo-docg').style.visibility = 'visible'
+        }
+        const regionRedWineItalyPiedmont = document.querySelector('#red-wine-italy-piedmont')
+        regionRedWineItalyPiedmont.addEventListener('change', regionRedWineItalyPiedmontShowSubregion)
+
+        function regionRedWineFranceBurgundyShowSubregion(){
+            subregions.forEach(subregion => subregion.style.visibility = 'hidden')
+            if(regionRedWineFranceBurgundy.value == 'CÔTE DE NUITS') document.querySelector('#red-wine-france-burgundy-côte-de-nuits').style.visibility = 'visible'
+            if(regionRedWineFranceBurgundy.value == 'CÔTE DE BEAUNE') document.querySelector('#red-wine-france-burgundy-côte-de-beaune').style.visibility = 'visible'
+        }
+        const regionRedWineFranceBurgundy = document.querySelector('#red-wine-france-burgundy')
+        regionRedWineFranceBurgundy.addEventListener('change', regionRedWineFranceBurgundyShowSubregion)
+
+        function regionRedWineFranceBordeauxShowSubregion(){
+            subregions.forEach(subregion => subregion.style.visibility = 'hidden')
+            if(regionRedWineFranceBordeaux.value == 'FIRST GROWTH') document.querySelector('#red-wine-france-bordeaux-first-growth').style.visibility = 'visible'
+        }
+        const regionRedWineFranceBordeaux = document.querySelector('#red-wine-france-bordeaux')
+        regionRedWineFranceBordeaux.addEventListener('change', regionRedWineFranceBordeauxShowSubregion)
+
+        function regionRedWineFranceRhôneValleyShowSubregion(){
+            subregions.forEach(subregion => subregion.style.visibility = 'hidden')
+            if(regionRedWineFranceRhôneValley.value == 'NORTHERN RHÔNE') document.querySelector('#red-wine-france-rhône-valley-northern-rhône').style.visibility = 'visible'
+            if(regionRedWineFranceRhôneValley.value == 'SOUTHERN RHÔNE') document.querySelector('#red-wine-france-rhône-valley-southern-rhône').style.visibility = 'visible'
+        }
+        const regionRedWineFranceRhôneValley = document.querySelector('#red-wine-france-rhône-valley')
+        regionRedWineFranceRhôneValley.addEventListener('change', regionRedWineFranceRhôneValleyShowSubregion)
 
 
     </script>
