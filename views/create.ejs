@@ -66,13 +66,14 @@
         #region-wrapper,
         #subregion-wrapper{
             position:relative;
+            display:none;
         }
         .section,
         .category,
         .region,
         .subregion{
             position:absolute;
-            visibility:hidden;
+            display:none;
         }
     </style>
 </head>
@@ -208,9 +209,6 @@
                     <option value="">Madeira</option>
                 </select>
     
-                <select class="section" style="visibility:visible;">
-                    <option selected disabled value="default">Select a Section...</option>
-                </select>
 
             </div>
 
@@ -301,9 +299,6 @@
                     <option value="NEW YORK">New York</option>
                 </select>
 
-                <select id="category-default" class="category" style="visibility:visible">
-                    <option selected disabled value="default">Select a Category...</option>
-                </select>
 
             </div>
 
@@ -447,10 +442,6 @@
                     <option value="NORTH FORK LONG ISLAND">North Fork Long Island</option>
                 </select>
 
-                <select id="region-default" class="region" style="visibility:visible">
-                    <option selected disabled value="default">Select a Region...</option>
-                </select>
-
             </div>
 
 
@@ -532,11 +523,6 @@
                     <option value="CHÂTEAUNEUF-DU-PAPE">Châteauneuf-du-Pape</option>
                     <option value="VACQUEYRAS">Vacqueyras</option>
                 </select>
-
-
-                <select id="subregion-default" class="subregion" style="visibility:visible">
-                    <option selected disabled value="default">Select a Sub-Region...</option>
-                </select>
                 
             </div>
 
@@ -595,58 +581,52 @@
         const subregionWrapper = document.querySelector('#subregion-wrapper')
 
         function showSection(){
+            sectionWrapper.style.display = 'none'
+            categoryWrapper.style.display = 'none'
+            regionWrapper.style.display = 'none'
+            subregionWrapper.style.display = 'none'
             const sections = document.querySelectorAll('.section')
-            sections.forEach(section=>section.style.visibility = 'hidden')
+            sections.forEach(section=>section.style.display = 'none')
             const type = document.querySelector('#type').value
             if(type == 'BY THE GLASS') {
-                document.querySelector('#section-btg').style.visibility = 'visible'
-                document.querySelector('#section-btg').value = 'default'
-                categoryWrapper.style.visibility = 'hidden'
-                regionWrapper.style.visibility = 'hidden'
-                subregionWrapper.style.visibility = 'hidden'
-                document.querySelector('#category-default').style.visibility = 'hidden'
-                document.querySelector('#region-default').style.visibility = 'hidden'
-                document.querySelector('#subregion-default').style.visibility = 'hidden'
-
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-btg').style.display = 'block'
             }
             if(type == 'HALF BOTTLES') {
-                document.querySelector('#section-half-bottle').style.visibility = 'visible'
-                document.querySelector('#section-half-bottle').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-half-bottle').style.display = 'block'
             }
             if(type == 'LARGE FORMATS') {
-                document.querySelector('#section-large-format').style.visibility = 'visible'
-                document.querySelector('#section-large-format').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-large-format').style.display = 'block'
             }
             if(type == 'SAKE') {
-                document.querySelector('#section-sake').style.visibility = 'visible'
-                document.querySelector('#section-sake').value = 'default'
-            }
-            if(type == 'SPARKLING') {
-                sectionWrapper.style.visibility = 'hidden'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-sake').style.display = 'block'
             }
             if(type == 'CHAMPAGNE') {
-                document.querySelector('#section-champagne').style.visibility = 'visible'
-                document.querySelector('#section-champagne').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-champagne').style.display = 'block'
             }
             if(type == 'WHITE WINE') {
-                document.querySelector('#section-white-wine').style.visibility = 'visible'
-                document.querySelector('#section-white-wine').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-white-wine').style.display = 'block'
             }
             if(type == 'ROSÉ WINE') {
-                document.querySelector('#section-rosé-wine').style.visibility = 'visible'
-                document.querySelector('#section-rosé-wine').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-rosé-wine').style.display = 'block'
             }
             if(type == 'RED WINE') {
-                document.querySelector('#section-red-wine').style.visibility = 'visible'
-                document.querySelector('#section-red-wine').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-red-wine').style.display = 'block'
             }
             if(type == 'SWEET WINE') {
-                document.querySelector('#section-sweet-wine').style.visibility = 'visible'
-                document.querySelector('#section-sweet-wine').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-sweet-wine').style.display = 'block'
             }
             if(type == 'FORTIFIED WINE') {
-                document.querySelector('#section-fortified-wine').style.visibility = 'visible'
-                document.querySelector('#section-fortified-wine').value = 'default'
+                document.querySelector('#section-wrapper').style.display = 'block'
+                document.querySelector('#section-fortified-wine').style.display = 'block'
             }
         }
         const wineType = document.querySelector('#type')
