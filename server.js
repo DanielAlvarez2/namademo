@@ -12,6 +12,7 @@ connectDB()
 
 app.use('/', mainRoutes)
 app.use('/create', mainRoutes)
+app.use('/create2', mainRoutes)
 
 app.listen(process.env.PORT,()=>{
     console.log(`Express Server Now Listening on port ${process.env.PORT}`);

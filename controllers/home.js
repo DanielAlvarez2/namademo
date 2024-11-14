@@ -9,6 +9,7 @@ module.exports={
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),
+    getCreate2:(req,res)=>res.render('create2.ejs'),
 
     postCreate:async(req,res)=>{
         console.log("req.body: ", req.body)
