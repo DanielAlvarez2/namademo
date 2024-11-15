@@ -380,10 +380,10 @@
                 <select class="region" name="region" id="red-wine-italy-tuscany">
                     <option selected disabled value="default">Select a Region...</option>
                     <option value="BOLGHERI DOC">Bolgheri DOC</option>
-                    <option value="TUSCANY IGT">TUSCANY IGT</option>
-                    <option value="CHIANTI CLASSICO DOCG">CHIANTI CLASSICO DOCG</option>
-                    <option value="ROSSO DI MONTALCINO">ROSSO DI MONTALCINO</option>
-                    <option value="BRUNELLO DI MONTALCINO DOCG">BRUNELLO DI MONTALCINO DOCG</option>
+                    <option value="TUSCANY IGT">Tuscany IGT</option>
+                    <option value="CHIANTI CLASSICO DOCG">Chianti Classico DOCG</option>
+                    <option value="ROSSO DI MONTALCINO">Rosso di Montalcino</option>
+                    <option value="BRUNELLO DI MONTALCINO DOCG">Brunello di Montalcino DOCG</option>
                 </select>
 
                 <select class="region" name="region" id="red-wine-france-burgundy">
@@ -657,19 +657,23 @@
             subregionWrapper.style.display = 'none'
             categories.forEach(category => category.style.display = 'none')
             if (sectionWhiteWine.value == 'ITALY') {
+                document.querySelector('#white-wine-italy').value = 'default'
                 document.querySelector('#category-wrapper').style.display = 'block'
                 document.querySelector('#white-wine-italy').style.display = 'block'
             } 
             if (sectionWhiteWine.value == 'FRANCE') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-france').value = 'default'
                 document.querySelector('#white-wine-france').style.display = 'block'
             } 
             if (sectionWhiteWine.value == 'GERMANY') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-germany').value = 'default'
                 document.querySelector('#white-wine-germany').style.display = 'block'
             } 
             if (sectionWhiteWine.value == 'UNITED STATES') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-united-states').value = 'default'
                 document.querySelector('#white-wine-united-states').style.display = 'block'
             }
         }
@@ -685,10 +689,12 @@
             categories.forEach(category => category.style.display = 'none')
             if (sectionRoséWine.value == 'FRANCE') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#rosé-wine-france').value = 'default'
                 document.querySelector('#rosé-wine-france').style.display = 'block'
             }
             if (sectionRoséWine.value == 'ITALY') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#rosé-wine-italy').value = 'default'
                 document.querySelector('#rosé-wine-italy').style.display = 'block'
             }
         }
@@ -703,18 +709,22 @@
             categories.forEach(category => category.style.display = 'none')
             if (sectionRedWine.value == 'ITALY') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-italy').value = 'default'
                 document.querySelector('#red-wine-italy').style.display = 'block'
             }
             if (sectionRedWine.value == 'FRANCE') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france').value = 'default'
                 document.querySelector('#red-wine-france').style.display = 'block'
             }
             if (sectionRedWine.value == 'SPAIN') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-spain').value = 'default'
                 document.querySelector('#red-wine-spain').style.display = 'block'
             }
             if (sectionRedWine.value == 'UNITED STATES') {
                 document.querySelector('#category-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-united-states').value = 'default'
                 document.querySelector('#red-wine-united-states').style.display = 'block'
             }
         }
@@ -728,14 +738,17 @@
             regions.forEach(region => region.style.display = 'none')
             if(categoryWhiteWineFrance.value == 'BURGUNDY') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-france-burgundy').value = 'default'
                 document.querySelector('#white-wine-france-burgundy').style.display = 'block'
             }
             if(categoryWhiteWineFrance.value == 'LOIRE VALLEY') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-france-loire-valley').value = 'default'
                 document.querySelector('#white-wine-france-loire-valley').style.display = 'block'
             }
             if(categoryWhiteWineFrance.value == 'JURA') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-france-jura').value = 'default'
                 document.querySelector('#white-wine-france-jura').style.display = 'block'
             }
         }
@@ -747,10 +760,12 @@
             console.log(categoryWhiteWineUnitedStates.value)
             if(categoryWhiteWineUnitedStates.value == 'CALIFORNIA') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-united-states-california').value = 'default'
                 document.querySelector('#white-wine-united-states-california').style.display = 'block'
             }
             if(categoryWhiteWineUnitedStates.value == 'OREGON') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#white-wine-united-states-oregon').value = 'default'
                 document.querySelector('#white-wine-united-states-oregon').style.display = 'block'
             }
         }
@@ -760,12 +775,14 @@
         function categoryRedWineItalyShowRegion(){
             regions.forEach(region => region.style.display = 'none')
             if(categoryRedWineItaly.value == 'PIEDMONT') {
-                document.querySelector('#region-wrapper').style.disply = 'block'
-                document.querySelector('#red-wine-italy-piedmont').style.disply = 'block'
+                document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-italy-piedmont').value = 'default'
+                document.querySelector('#red-wine-italy-piedmont').style.display = 'block'
             }
             if(categoryRedWineItaly.value == 'TUSCANY') {
-                document.querySelector('#region-wrapper').style.disply = 'block'
-                document.querySelector('#red-wine-italy-tuscany').style.disply = 'block'
+                document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-italy-tuscany').value = 'default'
+                document.querySelector('#red-wine-italy-tuscany').style.display = 'block'
             }
         }
         const categoryRedWineItaly = document.querySelector('#red-wine-italy')
@@ -775,18 +792,22 @@
             regions.forEach(region => region.style.display = 'none')
             if(categoryRedWineFrance.value == 'BURGUNDY') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-burgundy').value = 'default'
                 document.querySelector('#red-wine-france-burgundy').style.display = 'block'
             }
             if(categoryRedWineFrance.value == 'BORDEAUX') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-bordeaux').value = 'default'
                 document.querySelector('#red-wine-france-bordeaux').style.display = 'block'
             }
             if(categoryRedWineFrance.value == 'LOIRE VALLEY') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-loire-valley').value = 'default'
                 document.querySelector('#red-wine-france-loire-valley').style.display = 'block'
             }
             if(categoryRedWineFrance.value == 'RHÔNE VALLEY') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-rhône-valley').value = 'default'
                 document.querySelector('#red-wine-france-rhône-valley').style.display = 'block'
             }
         }
@@ -797,18 +818,22 @@
             regions.forEach(region => region.style.display = 'none')
             if(categoryRedWineUnitedStates.value == 'OREGON') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-united-states-oregon').value = 'default'
                 document.querySelector('#red-wine-united-states-oregon').style.display = 'block'
             }
             if(categoryRedWineUnitedStates.value == 'CALIFORNIA') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-united-states-california').value = 'default'
                 document.querySelector('#red-wine-united-states-california').style.display = 'block'
             }
             if(categoryRedWineUnitedStates.value == 'WASHINGTON') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-united-states-washington').value = 'default'
                 document.querySelector('#red-wine-united-states-washington').style.display = 'block'
             }
             if(categoryRedWineUnitedStates.value == 'NEW YORK') {
                 document.querySelector('#region-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-united-states-new-york').value = 'default'
                 document.querySelector('#red-wine-united-states-new-york').style.display = 'block'
             }
         }
@@ -821,6 +846,7 @@
             subregions.forEach(subregion => subregion.style.display = 'none')
             if(regionRedWineItalyPiedmont.value == 'BAROLO DOCG') {
                 document.querySelector('#subregion-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-italy-piedmont-barolo-docg').value = 'default'
                 document.querySelector('#red-wine-italy-piedmont-barolo-docg').style.display = 'block'
             }
         }
@@ -831,10 +857,12 @@
             subregions.forEach(subregion => subregion.style.display = 'none')
             if(regionRedWineFranceBurgundy.value == 'CÔTE DE NUITS') {
                 document.querySelector('#subregion-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-burgundy-côte-de-nuits').value = 'default'
                 document.querySelector('#red-wine-france-burgundy-côte-de-nuits').style.display = 'block'
             }
             if(regionRedWineFranceBurgundy.value == 'CÔTE DE BEAUNE') {
                 document.querySelector('#subregion-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-burgundy-côte-de-beaune').value = 'default'
                 document.querySelector('#red-wine-france-burgundy-côte-de-beaune').style.display = 'block'
             }
         }
@@ -845,6 +873,7 @@
             subregions.forEach(subregion => subregion.style.display = 'none')
             if(regionRedWineFranceBordeaux.value == 'FIRST GROWTH') {
                 document.querySelector('#subregion-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-bordeaux-first-growth').value = 'default'
                 document.querySelector('#red-wine-france-bordeaux-first-growth').style.display = 'block'
             }
         }
@@ -855,10 +884,12 @@
             subregions.forEach(subregion => subregion.style.display = 'none')
             if(regionRedWineFranceRhôneValley.value == 'NORTHERN RHÔNE') {
                 document.querySelector('#subregion-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-rhône-valley-northern-rhône').value = 'default'
                 document.querySelector('#red-wine-france-rhône-valley-northern-rhône').style.display = 'block'
             }
             if(regionRedWineFranceRhôneValley.value == 'SOUTHERN RHÔNE') {
                 document.querySelector('#subregion-wrapper').style.display = 'block'
+                document.querySelector('#red-wine-france-rhône-valley-southern-rhône').value = 'default'
                 document.querySelector('#red-wine-france-rhône-valley-southern-rhône').style.display = 'block'
             }
         }
