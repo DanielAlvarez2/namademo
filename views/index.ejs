@@ -1,2 +1,10 @@
-<h1>TEST</h1>
+<h1>BY THE GLASS SELECTION</h1>
 
+<% for(let i=0;i<btg.length;i++){ %>
+    <div>
+        <%= btg[i].bin %> 
+        <%= btg[i].description %>
+        <%= btg[i].vintageSize %>
+        <%= btg[i].price %>
+    </div>
+<% } %>

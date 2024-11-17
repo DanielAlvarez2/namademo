@@ -1,11 +1,11 @@
-const BTG = require('../models/BTG.js')
+const wines = require('../models/Wine.js')
 
 module.exports={
     getIndex:async(req,res)=>{
-        const btg_sake = await BTG.find({
-            section:'sake'
+        const btg = await wines.find({
+            type:'BY THE GLASS'
         }).sort({sequence:'asc'})
-        res.render('index.ejs',{btg_sake:btg_sake})
+        res.render('index.ejs',{btg:btg})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),

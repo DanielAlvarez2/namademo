@@ -115,12 +115,13 @@
         <div id="spirit-tab">Add New Spirit</div>
     </div>
     <div id="wine-form">
-        <form>
+        <form   method = 'POST'
+                action = '../update/createWine'>
             <input type="hidden" value="wine" name="wine_spirit">
 
             <label for="type">Type of Wine:</label><br>
             <select id="type" name="type" required>
-                <option disabled selected value="default">Select Wine Type...</option>
+                <option disabled selected value="">Select Wine Type...</option>
                 <option value="BY THE GLASS">By The Glass</option>
                 <option value="HALF BOTTLES">Half Bottle</option>
                 <option value="LARGE FORMATS">Large Format</option>
@@ -139,8 +140,8 @@
                 <br>
                 <label for="section" id="label-section">Section:</label><br>
     
-                <select class="section" id="section-btg" name="section">
-                    <option disabled selected value="default">Select a Section...</option>
+                <select class="section" id="section-btg" name="section" required>
+                    <option disabled selected value="">Select a Section...</option>
                     <option value="SAKE">Sake</option>
                     <option value="CARAFE">Carafe</option>
                     <option value="CHAMPAGNE">Champagne</option>
@@ -562,22 +563,19 @@
 
             <br><br>
             <label for="bin">Bin#:</label><br>
-            <input type="number" min="0" max="9999" name="bin">
+            <input type="number" min="0" max="9999" name="bin" required>
 
             <br><br>
             <label for="description">Description:</label><br>
-            <input id="description_1row" type="text" name="description" maxlength="85" size="120">
-            <textarea id="description_2rows" maxlength="85" rows="2" cols="60" name="description"></textarea>
-            <textarea id="description_3rows" maxlength="85" rows="3" cols="40" name="description"></textarea>
-            <textarea id="description_4rows" maxlength="85" rows="4" cols="30" name="description"></textarea>
+            <textarea id="description" maxlength="85" rows="1" cols="120" name="description" required></textarea>
 
             <br><br>
             <label for="vintage_size">Vintage:</label><br>
-            <input type="text" name="vintage_size" maxlength="4" style="width:5ch">
+            <input type="text" name="vintage_size" maxlength="4" style="width:5ch" required>
 
             <br><br>
             <label for="price">Price:</label><br>
-            <input type="number" name="price" min="0" max="99999">
+            <input type="number" name="price" min="0" max="99999" required>
 
             <br><br>
             <label for="cost">Cost:</label><br>
@@ -585,12 +583,12 @@
 
             <br><br>
             <label for="quantity">Quantity:</label><br>
-            <input type="number" min="0" max="999">
+            <input type="number" name="quantity" min="0" max="999">
 
             <br><br>
             <label for="status">Status:</label><br>
-            <select name="status">
-                <option selected disabled>Select a Status...</option>
+            <select name="status" required>
+                <option selected disabled value="">Select a Status...</option>
                 <option value="pre-launch">Pre-Launch</option>
                 <option value="live">Live</option>
                 <option value="retired" disabled>Retired</option>
@@ -626,7 +624,6 @@
             sections.forEach(section=>section.style.display = 'none')
             const type = document.querySelector('#type').value
             if(type == 'BY THE GLASS') {
-                document.querySelector('#section-btg').value = 'default'
                 document.querySelector('#section-wrapper').style.display = 'block'
                 document.querySelector('#section-btg').style.display = 'block'
             }
