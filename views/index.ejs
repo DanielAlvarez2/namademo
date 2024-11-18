@@ -15,11 +15,16 @@
             padding:0;
             box-sizing:border-box;
         }
+        html{
+            font-size:10px;
+        }
         body{
             font-family: diotima;
             font-size:1rem;
+            line-height: 2rem;
         }
         .page{
+            padding:0.5in 0;
             margin:5px auto;
             width:8.5in;
             height:11in;
@@ -27,21 +32,98 @@
             border:1px solid black;
         }
         h1,h2,h3,h4,h5{
-            font-size:1.1rem;
+            font-size:1.2rem;
+            font-weight:500;
+        }
+        h2{
+            margin-top:1rem;
+        }
+        .item{
+            display:flex;
+            justify-content: space-between;
+            width:6in;
+            margin:0 auto;
+        }
+        .item-left{
+            display:flex;
+        }
+        .item-right{
+            display:flex;
+            margin-left:10px;
+        }
+        .bin{
+            width:0.5in;
+            
+        }
+        .vintage-size,.price{
+            width:0.5in;
+        }
+        .hashtag{
+            color:#cccccc00;
         }
     </style>
 </head>
 <body>
 
     <div class="page">
-        <h1>BY THE GLASS SELECTION</h1>
-
+        <div class="item">
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span> 
+                </span>
+                <span>
+                    <h1>BY THE GLASS SELECTION</h1>                        
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    
+                </span>
+                <span class="price">
+                        
+                </span>
+            </span>
+        </div>
+        <% const sections = new Set() %>
         <% for(let i=0;i<btg.length;i++){ %>
-            <div>
-                <%= btg[i].bin %> 
-                <%= btg[i].description %>
-                <%= btg[i].vintageSize %>
-                <%= btg[i].price %>
+            <% if (!sections.has(btg[i].section)){ %>
+                <% sections.add(btg[i].section)%>
+                    <div class="item">
+                        <span class="item-left">
+                            <span class="bin">
+                                <span class="hashtag">#</span> 
+                            </span>
+                            <span>
+                                <h2><%= btg[i].section %></h2>                        
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <span class="vintage-size">
+                                
+                            </span>
+                            <span class="price">
+                                    
+                            </span>
+                        </span>
+                    </div>
+                <% } %>
+            <div class="item">
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= btg[i].bin %> 
+                    </span>
+                    <span>
+                        <%= btg[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= btg[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= btg[i].price %>    
+                    </span>
+                </span>
             </div>
         <% } %>
     </div>
