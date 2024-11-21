@@ -84,17 +84,13 @@
                 </span>
             </span>
         </div>
-        <% const sections = new Set() %>
-        
 
 
-
-
-
+        <% const sectionsBTG = new Set() %>
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "SAKE") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section) %>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -140,8 +136,8 @@
 
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "CARAFE") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section)%>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -187,8 +183,8 @@
 
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "CHAMPAGNE") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section)%>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -234,8 +230,8 @@
 
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "WHITE WINE") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section)%>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -282,8 +278,8 @@
 
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "ROSÉ WINE") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section)%>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -333,8 +329,8 @@
 
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "RED WINE") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section)%>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -382,8 +378,8 @@
 
         <% for(let i=0;i<btg.length;i++){ %>
             <% if(btg[i].section == "DESSERT & FORTIFIED") { %>            
-                <% if (!sections.has(btg[i].section)){ %>
-                    <% sections.add(btg[i].section)%>
+                <% if (!sectionsBTG.has(btg[i].section)){ %>
+                    <% sectionsBTG.add(btg[i].section)%>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -430,6 +426,89 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="page">
+
+        <div class="item">
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span> 
+                </span>
+                <span>
+                    <h1>HALF BOTTLES</h1>                        
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    
+                </span>
+                <span class="price">
+                        
+                </span>
+            </span>
+        </div>
+
+
+        <% const sectionsHalfBottles = new Set() %>
+        <% for(let i=0;i<halfBottles.length;i++){ %>
+            <% if(halfBottles[i].section == "CHAMPAGNE") { %>            
+                <% if (!sectionsHalfBottles.has(halfBottles[i].section)){ %>
+                    <% sectionsHalfBottles.add(halfBottles[i].section) %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= halfBottles[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">
+                                    
+                                </span>
+                                <span class="price">
+                                        
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= halfBottles[i].bin %> 
+                        </span>
+                        <span>
+                            <%= halfBottles[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= halfBottles[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= halfBottles[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
 
 
 

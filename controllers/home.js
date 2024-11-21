@@ -5,7 +5,10 @@ module.exports={
         const btg = await wines.find({
             type:'BY THE GLASS'
         }).sort({sequence:'asc'})
-        res.render('index.ejs',{btg:btg})
+        const halfBottles = await wines.find({
+            type:'HALF BOTTLES'
+        }).sort({sequence:'asc'})
+        res.render('index.ejs',{btg:btg,halfBottles:halfBottles})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),
