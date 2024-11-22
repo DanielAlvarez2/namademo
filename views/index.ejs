@@ -604,6 +604,52 @@
 
 
 
+        <% for(let i=0;i<halfBottles.length;i++){ %>
+            <% if(halfBottles[i].section == "SAKE") { %>            
+                <% if (!sectionsHalfBottles.has(halfBottles[i].section)){ %>
+                    <% sectionsHalfBottles.add(halfBottles[i].section) %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= halfBottles[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">
+                                    
+                                </span>
+                                <span class="price">
+                                        
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= halfBottles[i].bin %> 
+                        </span>
+                        <span>
+                            <%= halfBottles[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= halfBottles[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= halfBottles[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+
+
+
     </div>
     
     

@@ -75,6 +75,14 @@
             position:relative;
             display:none;
         }
+        #bin-flex{
+            display:flex;
+            gap:15px;
+            text-align: center;
+        }
+        #submit-wine{
+            pointer:cursor;
+        }
         @media (width < 1000px) {
             #description{
                 height:3em;
@@ -552,21 +560,29 @@
                 
             </div>
 
-            <br><br>
-            <label for="bin">Bin#:</label><br>
-            <input type="number" min="0" max="9999" name="bin" required>
-
+            <div id="bin-flex">
+                <div>
+                    <br><br>
+                    <label for="bin">Bin:</label><br>
+                    #<input type="number" min="0" max="9999" name="bin" required>        
+                </div>
+                <div>
+                    <br><br>
+                    <label for="vintage_size">Vintage:</label><br>
+                    <input type="text" name="vintage_size" maxlength="4" style="width:5ch" required>        
+                </div>
+                <div>
+                    <br><br>
+                    <label for="price">Price:</label><br>
+                    $<input type="number" name="price" min="0" max="99999" required>        
+                </div>
+            </div>
+            
             <br><br>
             <label for="description">Description:</label><br>
             <textarea id="description" maxlength="85" rows="1" cols="120" name="description" required></textarea>
 
-            <br><br>
-            <label for="vintage_size">Vintage:</label><br>
-            <input type="text" name="vintage_size" maxlength="4" style="width:5ch" required>
 
-            <br><br>
-            <label for="price">Price:</label><br>
-            <input type="number" name="price" min="0" max="99999" required>
 
             <br><br>
             <label for="cost">Cost:</label><br>
@@ -587,7 +603,7 @@
 
 
             <br><br><br>
-            <button type="submit">Save</button>
+            <button id="submit-wine" type="submit">Save</button>
             <br><br>
         </form>
     </div>
@@ -600,8 +616,6 @@
 
 
     <script>
-
-        window.addEventListener('click',(e)=>console.log(e.target))
 
         const sectionWrapper = document.querySelector('#section-wrapper')
         const categoryWrapper = document.querySelector('#category-wrapper')
