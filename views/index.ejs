@@ -16,7 +16,7 @@
             box-sizing:border-box;
         }
         html{
-            font-size:11px;
+            font-size:10px;
         }
         body{
             font-family: diotima;
@@ -653,16 +653,218 @@
     </div>
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
+    <div class="page">
 
+        <div class="item">
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span> 
+                </span>
+                <span>
+                    <h1>LARGE FORMATS</h1>                        
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    
+                </span>
+                <span class="price">
+                        
+                </span>
+            </span>
+        </div>
+
+
+        <% const sectionsLargeFormats = new Set() %>
+
+        <% for(let i=0;i<largeFormats.length;i++){ %>
+            <% if(largeFormats[i].section == "SPARKLING & CHAMPAGNE") { %>            
+                <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
+                    <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= largeFormats[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">
+                                    
+                                </span>
+                                <span class="price">
+                                        
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= largeFormats[i].bin %> 
+                        </span>
+                        <span>
+                            <%= largeFormats[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= largeFormats[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= largeFormats[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+    
+
+
+
+        <% for(let i=0;i<largeFormats.length;i++){ %>
+            <% if(largeFormats[i].section == "WHITE WINE") { %>            
+                <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
+                    <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= largeFormats[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">                                    
+                                </span>
+                                <span class="price">
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= largeFormats[i].bin %> 
+                        </span>
+                        <span>
+                            <%= largeFormats[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= largeFormats[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= largeFormats[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+
+
+
+
+        <% for(let i=0;i<largeFormats.length;i++){ %>
+            <% if(largeFormats[i].section == "ROSÉ WINE") { %>            
+                <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
+                    <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= largeFormats[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">                                    
+                                </span>
+                                <span class="price">
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= largeFormats[i].bin %> 
+                        </span>
+                        <span>
+                            <%= largeFormats[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= largeFormats[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= largeFormats[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+
+
+
+
+        <% for(let i=0;i<largeFormats.length;i++){ %>
+            <% if(largeFormats[i].section == "RED WINE") { %>            
+                <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
+                    <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= largeFormats[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">                                    
+                                </span>
+                                <span class="price">
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= largeFormats[i].bin %> 
+                        </span>
+                        <span>
+                            <%= largeFormats[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= largeFormats[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= largeFormats[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 
 
 

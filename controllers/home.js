@@ -8,7 +8,12 @@ module.exports={
         const halfBottles = await wines.find({
             type:'HALF BOTTLES'
         }).sort({sequence:'asc'})
-        res.render('index.ejs',{btg:btg,halfBottles:halfBottles})
+        const largeFormats = await wines.find({
+            type:'LARGE FORMATS'
+        }).sort({sequence:'asc'})
+        res.render('index.ejs',{btg:btg,
+                                halfBottles:halfBottles,
+                                largeFormats:largeFormats})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),

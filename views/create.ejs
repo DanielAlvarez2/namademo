@@ -75,7 +75,8 @@
             position:relative;
             display:none;
         }
-        #bin-flex{
+        #bin-flex,
+        #inventory-flex{
             display:flex;
             gap:15px;
             text-align: center;
@@ -583,14 +584,19 @@
             <textarea id="description" maxlength="85" rows="1" cols="120" name="description" required></textarea>
 
 
+            <div id="inventory-flex">
+                <div>
+                    <br><br>
+                    <label for="cost">Cost:</label><br>
+                    $<input type="number" name="cost" min="0" max="99999">        
+                </div>
+                <div>
+                    <br><br>
+                    <label for="quantity">Quantity:</label><br>
+                    <input type="number" name="quantity" min="0" max="999">        
+                </div>
+            </div>
 
-            <br><br>
-            <label for="cost">Cost:</label><br>
-            <input type="number" name="cost" min="0" max="99999">
-
-            <br><br>
-            <label for="quantity">Quantity:</label><br>
-            <input type="number" name="quantity" min="0" max="999">
 
             <br><br>
             <label for="status">Status:</label><br>
