@@ -655,6 +655,8 @@
     
     <div class="page">
 
+    <% let pageLineCount = 0 %>
+
         <div class="item">
             <span class="item-left">
                 <span class="bin">
@@ -674,6 +676,8 @@
             </span>
         </div>
 
+    <% pageLineCount++ %>
+    <% pageLineCount++ %>
 
         <% const sectionsLargeFormats = new Set() %>
 
@@ -681,6 +685,7 @@
             <% if(largeFormats[i].section == "SPARKLING & CHAMPAGNE") { %>            
                 <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
                     <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                    <% pageLineCount++ %>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -701,6 +706,7 @@
                         </div>
                     <% } %>
                 <div class="item">
+                    <% pageLineCount++ %>
                     <span class="item-left">
                         <span class="bin">
                             <span class="hashtag">#</span><%= largeFormats[i].bin %> 
@@ -728,6 +734,7 @@
             <% if(largeFormats[i].section == "WHITE WINE") { %>            
                 <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
                     <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                    <% pageLineCount++ %>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -746,6 +753,7 @@
                         </div>
                     <% } %>
                 <div class="item">
+                    <% pageLineCount++ %>
                     <span class="item-left">
                         <span class="bin">
                             <span class="hashtag">#</span><%= largeFormats[i].bin %> 
@@ -773,6 +781,7 @@
             <% if(largeFormats[i].section == "ROSÉ WINE") { %>            
                 <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
                     <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                    <% pageLineCount++ %>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -791,6 +800,7 @@
                         </div>
                     <% } %>
                 <div class="item">
+                    <% pageLineCount++ %>
                     <span class="item-left">
                         <span class="bin">
                             <span class="hashtag">#</span><%= largeFormats[i].bin %> 
@@ -818,6 +828,7 @@
             <% if(largeFormats[i].section == "RED WINE") { %>            
                 <% if (!sectionsLargeFormats.has(largeFormats[i].section)){ %>
                     <% sectionsLargeFormats.add(largeFormats[i].section) %>
+                    <% pageLineCount++ %>
                         <div class="item">
                             <span class="item-left">
                                 <span class="bin">
@@ -835,7 +846,39 @@
                             </span>
                         </div>
                     <% } %>
+
+
+                <% if (pageLineCount == 38){%>
+                    </div>
+                    
+                    <div class="page">
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h1>LARGE FORMATS</h1>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">
+                                    
+                                </span>
+                                <span class="price">
+                                        
+                                </span>
+                            </span>
+                        </div>
+                
+                    <% pageLineCount++ %>
+                    <% pageLineCount++ %>
+                <% } %>
+
+
+
                 <div class="item">
+                    <% pageLineCount++ %>
                     <span class="item-left">
                         <span class="bin">
                             <span class="hashtag">#</span><%= largeFormats[i].bin %> 
