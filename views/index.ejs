@@ -64,7 +64,7 @@
     </style>
 </head>
 <body>
-
+<% const maxPageLineCount = 38 %>
     <div class="page">
         <div class="item">
             <span class="item-left">
@@ -848,7 +848,8 @@
                     <% } %>
 
 
-                <% if (pageLineCount == 38){%>
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
                     </div>
                     
                     <div class="page">
@@ -870,6 +871,7 @@
                                 </span>
                             </span>
                         </div>
+                        <br>
                 
                     <% pageLineCount++ %>
                     <% pageLineCount++ %>
