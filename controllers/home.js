@@ -11,9 +11,13 @@ module.exports={
         const largeFormats = await wines.find({
             type:'LARGE FORMATS'
         }).sort({sequence:'asc'})
+        const sake = await wines.find({
+            type:'SAKE'
+        }).sort({sequence:'asc'})
         res.render('index.ejs',{btg:btg,
                                 halfBottles:halfBottles,
-                                largeFormats:largeFormats})
+                                largeFormats:largeFormats,
+                                sake:sake})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),
