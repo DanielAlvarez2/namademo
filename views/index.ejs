@@ -1629,6 +1629,263 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="page">
+    <% pageLineCount = 0 %>
+
+        <div class="item">
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span> 
+                </span>
+                <span>
+                    <h1>ROSÉ WINE</h1>                        
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    
+                </span>
+                <span class="price">
+                        
+                </span>
+            </span>
+        </div>
+    <br>
+    <% pageLineCount++ %>
+    <% pageLineCount++ %>
+
+    <div class="item">
+        <span class="item-left">
+            <span class="bin">
+                <span class="hashtag">#</span> 
+            </span>
+            <span>
+                <h1>FRANCE</h1>                        
+            </span>
+        </span>
+        <span class="item-right">
+            <span class="vintage-size">
+                
+            </span>
+            <span class="price">
+                    
+            </span>
+        </span>
+    </div>
+<br>
+<% pageLineCount++ %>
+<% pageLineCount++ %>
+
+
+    
+
+
+
+
+    <% const categoriesRosé = new Set() %>
+
+    <% for(let i=0;i<rosé.length;i++){ %>
+        <% if(rosé[i].category == "LOIRE VALLEY") { %>            
+            <% if (!categoriesRosé.has(rosé[i].category)){ %>
+                <% categoriesRosé.add(rosé[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item">
+                        <span class="item-left">
+                            <span class="bin">
+                                <span class="hashtag">#</span> 
+                            </span>
+                            <span>
+                                <h2><%= rosé[i].category %></h2>                        
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <span class="vintage-size">
+                                
+                            </span>
+                            <span class="price">
+                                    
+                            </span>
+                        </span>
+                    </div>
+                <% } %>
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= rosé[i].bin %> 
+                    </span>
+                    <span>
+                        <%= rosé[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= rosé[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= rosé[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+            
+    <% for(let i=0;i<rosé.length;i++){ %>
+        <% if(rosé[i].category == "PROVENCE") { %>            
+            <% if (!categoriesRosé.has(rosé[i].category)){ %>
+                <% categoriesRosé.add(rosé[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item">
+                        <span class="item-left">
+                            <span class="bin">
+                                <span class="hashtag">#</span> 
+                            </span>
+                            <span>
+                                <h2><%= rosé[i].category %></h2>                        
+                            </span>
+                        </span>
+                        <span class="item-right">
+                            <span class="vintage-size">
+                                
+                            </span>
+                            <span class="price">
+                                    
+                            </span>
+                        </span>
+                    </div>
+                <% } %>
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= rosé[i].bin %> 
+                    </span>
+                    <span>
+                        <%= rosé[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= rosé[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= rosé[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+    <div class="item">
+        <span class="item-left">
+            <span class="bin">
+                <span class="hashtag">#</span> 
+            </span>
+            <span>
+                <h1>ITALY</h1>                        
+            </span>
+        </span>
+        <span class="item-right">
+            <span class="vintage-size">
+                
+            </span>
+            <span class="price">
+                    
+            </span>
+        </span>
+    </div>
+<br>
+<% pageLineCount++ %>
+<% pageLineCount++ %>
+<% pageLineCount++ %>
+<% pageLineCount++ %>
+
+
+
+
+
+
+<% for(let i=0;i<rosé.length;i++){ %>
+    <% if(rosé[i].category == "SICILY") { %>            
+        <% if (!categoriesRosé.has(rosé[i].category)){ %>
+            <% categoriesRosé.add(rosé[i].category) %>
+            <% pageLineCount++ %>
+                <div class="item">
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span> 
+                        </span>
+                        <span>
+                            <h2><%= rosé[i].category %></h2>                        
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            
+                        </span>
+                        <span class="price">
+                                
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <div class="item">
+            <% pageLineCount++ %>
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span><%= rosé[i].bin %> 
+                </span>
+                <span>
+                    <%= rosé[i].description %>    
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    <%= rosé[i].vintageSize %>
+                </span>
+                <span class="price">
+                    <%= rosé[i].price %>    
+                </span>
+            </span>
+        </div>
+    <% } %>
+<% } %>
+
+
+</div>
+
+
+
+
+
 </body>
 </html>
 
