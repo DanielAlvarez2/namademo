@@ -1,0 +1,10 @@
+create.ejs: type:sake switch Vintage: input to Size: input with ml after input box
+
+create.ejs: Save button when clicked change color? to indicate form has been submitted / and also disable click action
+
+index.ejs: insert comma into price display for wines $1,000 + 
+
+
+
+
+

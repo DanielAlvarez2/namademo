@@ -14,10 +14,18 @@ module.exports={
         const sake = await wines.find({
             type:'SAKE'
         }).sort({sequence:'asc'})
+        const sparkling = await wines.find({
+            type:'SPARKLING'
+        }).sort({sequence:'asc'})
+        const champagne =await wines.find({
+            type:'CHAMPAGNE'
+        }).sort({sequence:'asc'})
         res.render('index.ejs',{btg:btg,
                                 halfBottles:halfBottles,
                                 largeFormats:largeFormats,
-                                sake:sake})
+                                sake:sake,
+                                sparkling:sparkling,
+                                champagne:champagne})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),

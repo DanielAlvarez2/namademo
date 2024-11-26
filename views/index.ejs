@@ -910,15 +910,37 @@
 
     </div>
     
-<div class="page title-page">
 
+
+
+
+
+
+
+
+
+
+
+
+<div class="page title-page">
     <div>
         SAKE
     </div>
-
 </div>    
     
     
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     
@@ -1268,6 +1290,341 @@
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="page title-page">
+
+    <div>
+        SPARKLING & CHAMPAGNE
+    </div>
+
+</div>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div class="page">
+    <% pageLineCount = 0 %>
+
+        <div class="item">
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span> 
+                </span>
+                <span>
+                    <h1>SPARKLING</h1>                        
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    
+                </span>
+                <span class="price">
+                        
+                </span>
+            </span>
+        </div>
+    <br>
+    <% pageLineCount++ %>
+    <% pageLineCount++ %>
+
+        
+
+            <% for(let i=0;i<sparkling.length;i++){ %>
+                <div class="item">
+                    <% pageLineCount++ %>
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= sparkling[i].bin %> 
+                        </span>
+                        <span>
+                            <%= sparkling[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= sparkling[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= sparkling[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+
+            
+
+
+
+
+
+
+
+
+
+
+        <br>
+            <div class="item">
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span> 
+                    </span>
+                    <span>
+                        <h1>CHAMPAGNE</h1>                        
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        
+                    </span>
+                    <span class="price">
+                            
+                    </span>
+                </span>
+            </div>
+        <br>
+        <% pageLineCount++ %>
+        <% pageLineCount++ %>
+        <% pageLineCount++ %>
+    
+
+
+
+
+        <% const sectionsChampagne = new Set() %>
+
+
+        <% for(let i=0;i<champagne.length;i++){ %>
+            <% if(champagne[i].section == "NON-VINTAGE") { %>            
+                <% if (!sectionsChampagne.has(champagne[i].section)){ %>
+                    <% sectionsChampagne.add(champagne[i].section) %>
+                    <% pageLineCount++ %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= champagne[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">
+                                    
+                                </span>
+                                <span class="price">
+                                        
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+
+
+
+
+                    <% if (pageLineCount == maxPageLineCount){%>
+                        <% pageLineCount = 0 %>
+                        </div>                        
+                        <div class="page">
+                    <% } %>
+
+
+
+
+
+
+                <div class="item">
+                    <% pageLineCount++ %>
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= champagne[i].bin %> 
+                        </span>
+                        <span>
+                            <%= champagne[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= champagne[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= champagne[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+
+
+
+
+
+
+        <% for(let i=0;i<champagne.length;i++){ %>
+            <% if(champagne[i].section == "VINTAGE") { %>            
+                <% if (!sectionsChampagne.has(champagne[i].section)){ %>
+                    <% sectionsChampagne.add(champagne[i].section) %>
+                    <% pageLineCount++ %>
+                        <div class="item">
+                            <span class="item-left">
+                                <span class="bin">
+                                    <span class="hashtag">#</span> 
+                                </span>
+                                <span>
+                                    <h2><%= champagne[i].section %></h2>                        
+                                </span>
+                            </span>
+                            <span class="item-right">
+                                <span class="vintage-size">
+                                    
+                                </span>
+                                <span class="price">
+                                        
+                                </span>
+                            </span>
+                        </div>
+                    <% } %>
+                <div class="item">
+                    <% pageLineCount++ %>
+                    <span class="item-left">
+                        <span class="bin">
+                            <span class="hashtag">#</span><%= champagne[i].bin %> 
+                        </span>
+                        <span>
+                            <%= champagne[i].description %>    
+                        </span>
+                    </span>
+                    <span class="item-right">
+                        <span class="vintage-size">
+                            <%= champagne[i].vintageSize %>
+                        </span>
+                        <span class="price">
+                            <%= champagne[i].price %>    
+                        </span>
+                    </span>
+                </div>
+            <% } %>
+        <% } %>
+
+</div>
+
+
+
+
+
+
+<div class="page">
+    <% pageLineCount = 0 %>
+
+        <div class="item">
+            <span class="item-left">
+                <span class="bin">
+                    <span class="hashtag">#</span> 
+                </span>
+                <span>
+                    <h1>ROSÉ</h1>                        
+                </span>
+            </span>
+            <span class="item-right">
+                <span class="vintage-size">
+                    
+                </span>
+                <span class="price">
+                        
+                </span>
+            </span>
+        </div>
+    <br>
+    <% pageLineCount++ %>
+    <% pageLineCount++ %>
+
+        
+
+    <% for(let i=0;i<champagne.length;i++){ %>
+        <% if(champagne[i].section == "ROSÉ") { %>            
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= champagne[i].bin %> 
+                    </span>
+                    <span>
+                        <%= champagne[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= champagne[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= champagne[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+            
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="page title-page">
+    <div>
+        WHITE WINE
+    </div>
+</div>    
+
+
+
+
+
+
+
+
+
 
 
 
