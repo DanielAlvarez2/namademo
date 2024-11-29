@@ -23,13 +23,17 @@ module.exports={
         const rosé = await wines.find({
             type:'ROSÉ WINE'
         }).sort({sequence:'asc'})
+        const white = await wines.find({
+            type:'WHITE WINE'
+        }).sort({sequence:'asc'})
         res.render('index.ejs',{btg:btg,
                                 halfBottles:halfBottles,
                                 largeFormats:largeFormats,
                                 sake:sake,
                                 sparkling:sparkling,
                                 champagne:champagne,
-                                rosé:rosé})
+                                rosé:rosé,
+                                white:white})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),
