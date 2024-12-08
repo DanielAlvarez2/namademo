@@ -4089,6 +4089,362 @@
 
 
 
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "FRANCE") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+
+        <% if(white[i].category == "ALSACE") { %>
+            <% if (!categoriesWhite.has(white[i].category)){ %>
+                <% categoriesWhite.add(white[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "AUSTRIA") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+
+
+
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "GERMANY") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+
+        <% if(white[i].category == "TROCKEN") { %>
+            <% if (!categoriesWhite.has(white[i].category)){ %>
+                <% categoriesWhite.add(white[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+
+
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "GERMANY") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+
+        <% if(white[i].category == "PRÄDIKATSWEIN & FEINHERB") { %>
+            <% if (!categoriesWhite.has(white[i].category)){ %>
+                <% categoriesWhite.add(white[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+
+
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "SPAIN") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "PORTUGAL") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+    <% for(let i=0;i<white.length;i++){ %>
+
+        <% if(white[i].section == "ISRAEL") { %>
+            <% if (!categoriesWhite.has(white[i].section)){ %>
+                <% categoriesWhite.add(white[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= white[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+
+                <% if (pageLineCount == maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= white[i].bin %> 
+                    </span>
+                    <span>
+                        <%= white[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= white[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= white[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+
+
+
+
+
+
 
 
 
