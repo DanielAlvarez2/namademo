@@ -26,6 +26,9 @@ module.exports={
         const white = await wines.find({
             type:'WHITE WINE'
         }).sort({sequence:'asc'})
+        const red = await wines.find({
+            type:'RED WINE'
+        }).sort({sequence:'asc'})
         res.render('index.ejs',{btg:btg,
                                 halfBottles:halfBottles,
                                 largeFormats:largeFormats,
@@ -33,7 +36,8 @@ module.exports={
                                 sparkling:sparkling,
                                 champagne:champagne,
                                 rosé:rosé,
-                                white:white})
+                                white:white,
+                                red:red})
     },
 
     getCreate:(req,res)=>res.render('create.ejs'),
