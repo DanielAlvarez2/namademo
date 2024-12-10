@@ -5,7 +5,7 @@ const WineSchema = new mongoose.Schema({
     section:{type:String},
     category:{type:String},
     region:{type:String},
-    subRegion:{type:String},
+    subregion:{type:String},
     sequence:{type:Number},
     bin:{type:Number},
     description:{type:String},

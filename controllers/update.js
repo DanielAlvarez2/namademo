@@ -9,7 +9,7 @@ module.exports = {
                 section: req.body.section,
                 category: req.body.category,
                 region: req.body.region,
-                subRegion: req.body.subRegion,
+                subregion: req.body.subregion,
                 sequence: 1,
                 bin: req.body.bin,
                 description: req.body.description,
