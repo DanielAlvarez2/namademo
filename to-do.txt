@@ -4,7 +4,9 @@ create.ejs: Save button when clicked change color? to indicate form has been sub
 
 index.ejs: insert comma into price display for wines $1,000 + 
 
-
+in input page (create.ejs) choose red wine/france/burgundy
+then change burgundy to beaujolais
+region and subregion select elements SHOULD disappear
 
 
 
