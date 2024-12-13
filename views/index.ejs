@@ -9936,6 +9936,145 @@
             </div>
         <% } %>
     <% } %>
+</div>    
+    
+    
+<div class="page">
+    <% pageLineCount = 0 %>    
+    
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "LOIRE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "CHINON") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "LOIRE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "SAUMUR") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
     
     
     
@@ -9947,6 +10086,618 @@
     
 
 
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].region == "NORTHERN RHÔNE" && !red[i].subregion) { %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "CÔTE-RÔTIE") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "CORNAS") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "CROZES-HERMITAGE") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "HERMITAGE") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "SAINT-JOSEPH") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+</div>    
+    
+<div class="page">
+    <% pageLineCount = 0 %>    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "SOUTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "CHÂTEAUNEUF-DU-PAPE") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+
+    <% for(let i=0;i<red.length;i++){ %>
+
+        <% if(red[i].section == "FRANCE") { %>
+            <% if (!categoriesRed.has(red[i].section)){ %>
+                <% categoriesRed.add(red[i].section) %>
+                <% pageLineCount++ %>
+                <% pageLineCount++ %>
+                <br>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].section %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+    
+        <% if(red[i].category == "RHÔNE VALLEY") { %>
+            <% if (!categoriesRed.has(red[i].category)){ %>
+                <% categoriesRed.add(red[i].category) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span></span><span>
+                        <h2><%= red[i].category %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+        <% if(red[i].region == "NORTHERN RHÔNE") { %>
+            <% if (!categoriesRed.has(red[i].region)){ %>
+                <% categoriesRed.add(red[i].region) %>
+                <% pageLineCount++ %>
+                    <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                        <h2><%= red[i].region %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                    </div>
+            <% } %>
+        <% } %>
+                <% if(red[i].subregion == "VACQUEYRAS") { %>
+                    <% if (!categoriesRed.has(red[i].subregion)){ %>
+                        <% categoriesRed.add(red[i].subregion) %>
+                        <% pageLineCount++ %>
+                            <div class="item"><span class="item-left"><span class="bin"><span class="hashtag">#</span> </span><span>
+                                <h2><%= red[i].subregion %></h2></span></span><span class="item-right"><span class="vintage-size"></span><span class="price"></span></span>
+                            </div>
+                        <% } %>
+        
+                <% if (pageLineCount >= maxPageLineCount){%>
+                    <% pageLineCount = 0 %>
+                    </div>                        
+                    <div class="page">
+                <% } %>
+    
+            <div class="item">
+                <% pageLineCount++ %>
+                <span class="item-left">
+                    <span class="bin">
+                        <span class="hashtag">#</span><%= red[i].bin %> 
+                    </span>
+                    <span>
+                        <%= red[i].description %>    
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="vintage-size">
+                        <%= red[i].vintageSize %>
+                    </span>
+                    <span class="price">
+                        <%= red[i].price %>    
+                    </span>
+                </span>
+            </div>
+        <% } %>
+    <% } %>
+    
+    
+    
+    
+    
+    
+    
+    
 </div>
 
 
