@@ -8,5 +8,7 @@ in input page (create.ejs) choose red wine/france/burgundy
 then change burgundy to beaujolais
 region and subregion select elements SHOULD disappear
 
-
-
+FAST-ACCESS: 
+9 Kosher Wines Page
+4 Natural Wines Page 
+1 Sans Sulfites Page
